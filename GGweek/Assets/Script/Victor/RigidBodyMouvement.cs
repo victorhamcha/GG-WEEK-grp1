@@ -48,7 +48,7 @@ namespace Player
 
         private void FixedUpdate()
         {
-            GroundCheck();
+           
             ApplyMovement();
             ApplyFriction();
             ApplyGravity();
@@ -65,16 +65,7 @@ namespace Player
             return Physics.CheckCapsule(GetComponent<CapsuleCollider>().bounds.center, new Vector3(GetComponent<CapsuleCollider>().bounds.center.x, GetComponent<CapsuleCollider>().bounds.min.y, GetComponent<CapsuleCollider>().bounds.center.z), GetComponent<CapsuleCollider>().radius * 0.9f, whatIsGround);
 
         }
-        private void GroundCheck()
-        {
-           _grounded -= Time.fixedDeltaTime;
-            var colliderList = new Collider[100];
-            var size = Physics.OverlapSphereNonAlloc(transform.position + new Vector3(0, checkYOffset, 0), checkRadius, colliderList, whatIsGround);
-            _realGrounded = size > 0;
-            if (_realGrounded)
-                _grounded = groundTimer;
-
-        }
+   
 
         private void ApplyMovement()
         {
@@ -120,7 +111,7 @@ namespace Player
         {
 
             _jumpCooldown -= Time.deltaTime;
-            if (!IsGrounded() || !(_jumpCooldown <= 0) || !Input.GetKeyDown(KeyCode.Space)) return;
+            if (!IsGrounded() || !(_jumpCooldown <= 0) || !Input.GetKey(KeyCode.Space)) return;
             Vector3 vel = _rb.velocity;
             vel.y = jumpForce;
             _rb.velocity = vel;
