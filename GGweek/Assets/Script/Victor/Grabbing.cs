@@ -16,7 +16,7 @@ public class Grabbing : MonoBehaviour
     Vector3 mPosDelta = Vector3.zero;
     public List<Item> items = new List<Item>();
     private bool inventaireOn=false;
-    public List<Image> icons = new List<Image>();
+    public List<Button> icons = new List<Button>();
     // public Slider zoom;
     void Start()
     {
@@ -27,7 +27,10 @@ public class Grabbing : MonoBehaviour
     void Update()
     {
 
-      
+        for(int i =0;i<items.Count;i++)
+        {
+            
+        }
 
         if(Input.GetKeyDown(KeyCode.Tab))
         {
@@ -155,8 +158,8 @@ public class Grabbing : MonoBehaviour
        //icons[items.Count-1].sprite=item.icon;
     }
 
-    public void ActivObject()
+    public void ActivObject(int i)
     {
-        
+       grabed= ShowObject(items[i].gameObject);
     }
 }
