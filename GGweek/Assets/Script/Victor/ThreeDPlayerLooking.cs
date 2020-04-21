@@ -23,10 +23,10 @@ public class ThreeDPlayerLooking : MonoBehaviour
 
     void Update()
     {
-        grabbing = GetComponentInParent<Grabbing>().isGrabbing;
+        grabbing = GetComponentInParent<RigidBodyMouvement>().canMove;
 
 
-        if (Time.timeScale != 0.0f&&!grabbing)
+        if (Time.timeScale != 0.0f&&grabbing)
         {
             float mouseX = Input.GetAxis("Mouse X") * mouseSnesy;
             float mouseY = Input.GetAxis("Mouse Y") * mouseSnesy;
