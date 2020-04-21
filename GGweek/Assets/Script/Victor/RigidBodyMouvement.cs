@@ -2,9 +2,6 @@
 using UnityEngine;
 using System.Collections;
 
-
-namespace Player
-{
     public class RigidBodyMouvement : MonoBehaviour
     {
         [Header("Movement")]
@@ -38,7 +35,7 @@ namespace Player
         private float _grounded;
         private bool _realGrounded;
         private float _jumpCooldown;
-     
+        public bool canMove = true;
      
         private void Start()
         {
@@ -48,10 +45,13 @@ namespace Player
 
         private void FixedUpdate()
         {
-           
-            ApplyMovement();
-            ApplyFriction();
-            ApplyGravity();
+          if(canMove)
+            {
+                ApplyMovement();
+                ApplyFriction();
+                ApplyGravity();
+            }
+            
         }
 
         private void Update()
@@ -140,4 +140,4 @@ namespace Player
             return new Vector2(vec.x, vec.z);
         }
     }
-}
+
