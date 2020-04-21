@@ -12,6 +12,7 @@ public class ThreeDPlayerLooking : MonoBehaviour
     private float xRotation = 0f;
     public float minRotationHor;
     public float MaxRotationHor;
+    public bool grabbing;
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -22,8 +23,10 @@ public class ThreeDPlayerLooking : MonoBehaviour
 
     void Update()
     {
-     
-        if (Time.timeScale != 0.0f)
+        grabbing = GetComponentInParent<Grabbing>().isGrabbing;
+
+
+        if (Time.timeScale != 0.0f&&!grabbing)
         {
             float mouseX = Input.GetAxis("Mouse X") * mouseSnesy;
             float mouseY = Input.GetAxis("Mouse Y") * mouseSnesy;
