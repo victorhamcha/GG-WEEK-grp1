@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
@@ -9,7 +10,7 @@ public class Grabbing : MonoBehaviour
     
     public LayerMask grabable;
     public bool isGrabbing = false;
-    private GameObject grabed;
+    public GameObject grabed;
     public GameObject blur;
     public Transform objPos;
     Vector3 mPrevPos = Vector3.zero;
@@ -17,20 +18,22 @@ public class Grabbing : MonoBehaviour
     public List<Item> items = new List<Item>();
     private bool inventaireOn=false;
     public List<Button> icons = new List<Button>();
+    public List<GameObject> button = new List<GameObject>();
     // public Slider zoom;
     void Start()
     {
-
+     
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        for(int i =0;i<items.Count;i++)
+        
+       for(int i=0;i<icons.Count;i++)
         {
-            
+            UpdateIcons(i);
         }
+      
 
         if(Input.GetKeyDown(KeyCode.Tab))
         {
@@ -47,7 +50,7 @@ public class Grabbing : MonoBehaviour
         Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
 
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && Physics.Raycast(ray, out RaycastHit hit, 3, grabable) && items.Count<7)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && Physics.Raycast(ray, out RaycastHit hit, 3, grabable) && items.Count<7&&!isGrabbing)
         {
             
             addItem(hit.transform.gameObject.GetComponent<Item>());
@@ -58,11 +61,18 @@ public class Grabbing : MonoBehaviour
         //    grabed = Grab(hit.transform.gameObject);
         //}
 
-        if (isGrabbing && Input.GetKeyDown(KeyCode.K))
+        if (isGrabbing)
         {
-           
-            HideObject(grabed);
-          
+           if (Input.GetKeyDown(KeyCode.K))
+           {
+                HideObject(grabed);
+           }
+           else if (Input.GetKeyDown(KeyCode.F))
+           {
+                DropItem(grabed.GetComponent<Item>());
+           }
+
+
         }
         float mouseX = Input.GetAxis("Mouse X") * 20;
         float mouseY = Input.GetAxis("Mouse Y") * 20;
@@ -107,6 +117,10 @@ public class Grabbing : MonoBehaviour
     }
     public void CloseInv()
     {
+        if(isGrabbing)
+        {
+            HideObject(grabed);
+        }
         GetComponent<RigidBodyMouvement>().canMove = true;   
         Cursor.lockState = CursorLockMode.Locked;
         blur.SetActive(false);
@@ -139,8 +153,9 @@ public class Grabbing : MonoBehaviour
         items.Add(item);
         item.gameObject.GetComponent<Rigidbody>().isKinematic = true;
         item.gameObject.GetComponent<Collider>().isTrigger = true;
+        item.inInventaire = true;
         item.gameObject.SetActive(false);
-        UpdateIcons(item);
+        
     }
 
     public void DropItem(Item item)
@@ -148,18 +163,36 @@ public class Grabbing : MonoBehaviour
         item.gameObject.GetComponent<Rigidbody>().isKinematic = false;
         item.gameObject.GetComponent<Collider>().isTrigger = false;
         item.gameObject.SetActive(true);
+        grabed = null;
+        isGrabbing = false;
+        item.inInventaire = false;
+       
         items.Remove(item);
-        UpdateIcons(item);
+
        
     }
   
-    public void UpdateIcons(Item item)
+    public void UpdateIcons(int i)
     {
-       //icons[items.Count-1].sprite=item.icon;
+        if(items.Count>i)
+        { 
+            icons[i].image.sprite = items[i].icon;
+        }
+        else
+        {
+            icons[i].image.sprite = null;
+        }
+     
     }
 
-    public void ActivObject(int i)
+    public void ActiveObject(int i)
     {
-       grabed= ShowObject(items[i].gameObject);
+        if(items.Count>i)
+        {
+            grabed = ShowObject(items[i].gameObject);
+        }
+       
     }
+
+   
 }
