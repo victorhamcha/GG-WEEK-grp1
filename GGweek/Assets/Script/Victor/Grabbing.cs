@@ -21,6 +21,7 @@ public class Grabbing : MonoBehaviour
     public List<GameObject> button = new List<GameObject>();
     private Item prevItem;
     private Item currentItem;
+    private int puzzling = 0;
 
     // public Slider zoom;
     void Start()
@@ -54,7 +55,7 @@ public class Grabbing : MonoBehaviour
 
         HandleLookAtRay(ray);
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && Physics.Raycast(ray, out RaycastHit hit, 3, grabable) && items.Count<7&&!isGrabbing)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && Physics.Raycast(ray, out RaycastHit hit, 3, grabable) && items.Count<7&&!isGrabbing&&!inventaireOn)
         {
             
             addItem(hit.transform.gameObject.GetComponent<Item>());
@@ -113,7 +114,7 @@ public class Grabbing : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit, 3,grabable))
         {
-            if (!isGrabbing)
+            if (!isGrabbing && !inventaireOn)
             {
                 currentItem = hit.collider.GetComponent<Item>();
 
@@ -186,6 +187,12 @@ public class Grabbing : MonoBehaviour
         return grabbed;
     }
 
+    public void PuzzlePiece(GameObject grabbed)
+    {
+        grabbed.SetActive(true);
+        grabbed.transform.position = objPos.position;
+    }
+   
 
     public void HideObject(GameObject grabbed)
     {
@@ -232,12 +239,75 @@ public class Grabbing : MonoBehaviour
 
     public void ActiveObject(int i)
     {
-        if(items.Count>i)
+        if (items.Count > i&&!isGrabbing)
         {
             grabed = ShowObject(items[i].gameObject);
         }
+        else
+        {
+            Puzzled(i);
+        }
+
+       
        
     }
 
+    public void Puzzled(int i)
+    {
+        if (items.Count > i)
+        {
+            if (grabed.GetComponent<Item>().inPuzzle)
+            {
+                Item mbPiece = items[i];
+                bool puzzled = false;
+                for (int j = 0; j < grabed.GetComponent<Item>().pusslePiece.Count; j++)
+                {
+                    if (mbPiece == grabed.GetComponent<Item>().pusslePiece[j])
+                    {
+
+                        puzzled = true;
+                        break;
+                    }
+                }
+                if (puzzled)
+                {
+                    PuzzlePiece(mbPiece.gameObject);
+                    puzzling += 1;
+                }
+                else
+                {
+                    puzzling = 0;
+                    for (int j = 0; j < grabed.GetComponent<Item>().pusslePiece.Count; j++)
+                    {
+                        grabed.GetComponent<Item>().pusslePiece[j].gameObject.SetActive(false);
+                    }
+                    grabed = ShowObject(items[i].gameObject);
+                }
+                if (puzzling == grabed.GetComponent<Item>().pusslePiece.Count)
+                {
+
+                    GameObject thePiece = Instantiate(grabed.GetComponent<Item>().instance, new Vector3(1000, 1000, 1000), Quaternion.identity);
+                    List<Item> destroyItem = new List<Item>();
+                    for (int j = 0; j < grabed.GetComponent<Item>().pusslePiece.Count; j++)
+                    {
+                        destroyItem.Add(grabed.GetComponent<Item>().pusslePiece[j]);
+                        DropItem(grabed.GetComponent<Item>().pusslePiece[j]);
+                        Destroy(destroyItem[j].gameObject);
+                    }
+                    GameObject destroyed = grabed;
+                    DropItem(grabed.GetComponent<Item>());
+                    Destroy(destroyed);
+                    addItem(thePiece.GetComponent<Item>());
+                    grabed = ShowObject(thePiece);
+
+                }
+            }
+            else
+            {
+                grabed = ShowObject(items[i].gameObject);
+            }
+        }
+           
+    }
    
 }

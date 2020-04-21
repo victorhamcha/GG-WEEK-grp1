@@ -5,11 +5,13 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     public Sprite icon;
-
+    public bool inPuzzle=false;
     public float maxOutlineWidth;
+    public GameObject instance;
     [Header("HightLight")]
     public Color OutlineColor;
     private MeshRenderer rendererr;
+    public List<Item> pusslePiece = new List<Item>();
 
     
 
