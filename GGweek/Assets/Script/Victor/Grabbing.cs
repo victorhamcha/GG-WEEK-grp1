@@ -111,9 +111,9 @@ public class Grabbing : MonoBehaviour
       
        
 
-        if (Physics.Raycast(ray, out RaycastHit hit, 3) )
+        if (Physics.Raycast(ray, out RaycastHit hit, 3,grabable))
         {
-            if (hit.collider.CompareTag("Interact"))
+            if (!isGrabbing)
             {
                 currentItem = hit.collider.GetComponent<Item>();
 

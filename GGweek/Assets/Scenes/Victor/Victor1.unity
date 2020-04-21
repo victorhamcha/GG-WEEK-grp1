@@ -1040,7 +1040,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1437314837493404300, guid: 24a1073a90301b74d8bf2afc1ce9be0a, type: 3}
+  - {fileID: 2100000, guid: c5586eae4fe7f6e40946a06e16011678, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1096,7 +1096,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 48cf43b3913420045aa7466e35be86d6, type: 3}
-  instance: {fileID: 0}
+  maxOutlineWidth: 0.1
+  OutlineColor: {r: 1, g: 0.023584902, b: 0.023584902, a: 1}
 --- !u!1 &947596386
 GameObject:
   m_ObjectHideFlags: 0
@@ -1664,7 +1665,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c5586eae4fe7f6e40946a06e16011678, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1706,7 +1707,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 48cf43b3913420045aa7466e35be86d6, type: 3}
-  instance: {fileID: 0}
+  maxOutlineWidth: 0.1
+  OutlineColor: {r: 1, g: 0.023584902, b: 0.023584902, a: 1}
 --- !u!1 &1358216171
 GameObject:
   m_ObjectHideFlags: 0
@@ -2221,7 +2223,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 48cf43b3913420045aa7466e35be86d6, type: 3}
-  instance: {fileID: 0}
+  maxOutlineWidth: 0.1
+  OutlineColor: {r: 1, g: 0.023584902, b: 0.023584902, a: 1}
 --- !u!1 &1816031761
 GameObject:
   m_ObjectHideFlags: 0
