@@ -32,7 +32,7 @@ using System.Collections;
 
 
 
-        private float _grounded;
+        
         private bool _realGrounded;
         private float _jumpCooldown;
         public bool canMove = true;

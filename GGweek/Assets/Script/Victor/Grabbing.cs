@@ -19,6 +19,9 @@ public class Grabbing : MonoBehaviour
     private bool inventaireOn=false;
     public List<Button> icons = new List<Button>();
     public List<GameObject> button = new List<GameObject>();
+    private Item prevItem;
+    private Item currentItem;
+
     // public Slider zoom;
     void Start()
     {
@@ -30,9 +33,9 @@ public class Grabbing : MonoBehaviour
     {
         
        for(int i=0;i<icons.Count;i++)
-        {
+       {
             UpdateIcons(i);
-        }
+       }
       
 
         if(Input.GetKeyDown(KeyCode.Tab))
@@ -46,20 +49,17 @@ public class Grabbing : MonoBehaviour
                 CloseInv();
             }
         }
-        // Camera.main.fieldOfView = zoom.value;
+      
         Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
 
+        HandleLookAtRay(ray);
 
         if (Input.GetKeyDown(KeyCode.Mouse0) && Physics.Raycast(ray, out RaycastHit hit, 3, grabable) && items.Count<7&&!isGrabbing)
         {
             
             addItem(hit.transform.gameObject.GetComponent<Item>());
         }
-        //if (Input.GetKeyDown(KeyCode.Mouse0) && Physics.Raycast(ray, out RaycastHit hit, 3, grabable) && !isGrabbing)
-        //{
-        //    blur.SetActive(true);
-        //    grabed = Grab(hit.transform.gameObject);
-        //}
+     
 
         if (isGrabbing)
         {
@@ -102,6 +102,53 @@ public class Grabbing : MonoBehaviour
 
             }
             mPrevPos = Input.mousePosition;
+        }
+    }
+
+
+    private void HandleLookAtRay(Ray ray)
+    {
+      
+       
+
+        if (Physics.Raycast(ray, out RaycastHit hit, 3) )
+        {
+            if (hit.collider.CompareTag("Interact"))
+            {
+                currentItem = hit.collider.GetComponent<Item>();
+
+                if (prevItem != currentItem)
+                {
+                    HideOutline();
+                    ShowOutline();
+                }
+                prevItem = currentItem;
+            }
+            else
+            {
+                HideOutline();
+            }
+        }
+        else
+        {
+            HideOutline();
+        }
+    }
+
+    private void ShowOutline()
+    {
+        if (currentItem != null)
+        {
+            currentItem.ShouOutline();
+        }
+    }
+
+    private void HideOutline()
+    {
+        if (prevItem != null)
+        {
+            prevItem.HideOutline();
+            prevItem = null;
         }
     }
 
@@ -153,7 +200,6 @@ public class Grabbing : MonoBehaviour
         items.Add(item);
         item.gameObject.GetComponent<Rigidbody>().isKinematic = true;
         item.gameObject.GetComponent<Collider>().isTrigger = true;
-        item.inInventaire = true;
         item.gameObject.SetActive(false);
         
     }
@@ -165,7 +211,6 @@ public class Grabbing : MonoBehaviour
         item.gameObject.SetActive(true);
         grabed = null;
         isGrabbing = false;
-        item.inInventaire = false;
        
         items.Remove(item);
 
