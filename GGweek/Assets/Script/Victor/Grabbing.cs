@@ -17,12 +17,12 @@ public class Grabbing : MonoBehaviour
     Vector3 mPrevPos = Vector3.zero;
     Vector3 mPosDelta = Vector3.zero;
     public List<Item> items = new List<Item>();
-    private bool inventaireOn=false;
+    public bool inventaireOn=false;
     public List<Button> icons = new List<Button>();
     private Item prevItem;
     private Item currentItem;
 
-    private bool _using;
+    public bool _using;
     // public Slider zoom;
     void Start()
     {
@@ -257,6 +257,7 @@ public class Grabbing : MonoBehaviour
         grabbed.GetComponent<Rigidbody>().isKinematic = false;
         grabbed.GetComponent<Collider>().isTrigger = false;
         grabbed.transform.parent = null;
+        inHand = null;
         _using = false;
     }
   
