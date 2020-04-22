@@ -1325,8 +1325,8 @@ GameObject:
   - component: {fileID: 667499718}
   - component: {fileID: 667499722}
   m_Layer: 11
-  m_Name: Sphere (2)
-  m_TagString: Interact3
+  m_Name: Sphere2
+  m_TagString: Interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2625,11 +2625,11 @@ MonoBehaviour:
     m_Bits: 512
   isGrabbing: 0
   grabed: {fileID: 0}
+  inHand: {fileID: 0}
   blur: {fileID: 0}
   objPos: {fileID: 0}
   items: []
   icons: []
-  button: []
 --- !u!114 &1084251324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2644,6 +2644,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1010260767}
   dist: 5
+  animShake: {fileID: 125148185}
   obj: {fileID: 56286231}
   obj2: {fileID: 1908181643}
   obj3: {fileID: 718615197}
@@ -3140,8 +3141,8 @@ GameObject:
   - component: {fileID: 1550928931}
   - component: {fileID: 1550928930}
   m_Layer: 11
-  m_Name: Sphere (3)
-  m_TagString: Interact1
+  m_Name: Sphere3
+  m_TagString: Interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3986,8 +3987,8 @@ GameObject:
   - component: {fileID: 2016748725}
   - component: {fileID: 2016748724}
   m_Layer: 11
-  m_Name: Sphere (1)
-  m_TagString: Interact2
+  m_Name: Sphere1
+  m_TagString: Interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4097,7 +4098,7 @@ MonoBehaviour:
   maxOutlineWidth: 0
   instance: {fileID: 0}
   OutlineColor: {r: 0, g: 0, b: 0, a: 0}
-  pusslePiece: []
+  pusslePiece: {fileID: 0}
 --- !u!1 &2062242576
 GameObject:
   m_ObjectHideFlags: 0
