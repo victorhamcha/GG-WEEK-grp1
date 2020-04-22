@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LightController : MonoBehaviour
 {
+    public Camera cam;
+    public float dist;
     public GameObject obj;
     public GameObject obj2;
     public GameObject obj3;
@@ -12,6 +14,7 @@ public class LightController : MonoBehaviour
     private Light myLight2;
     private Light myLight3;
     private Light myLight4;
+
 
     private void Start()
     {
@@ -23,25 +26,47 @@ public class LightController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        RaycastHit hit;
+        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(ray, out hit, dist))
         {
-            myLight.enabled = !myLight.enabled;
-            myLight3.enabled = !myLight3.enabled;
+            if (hit.collider.CompareTag("Interact1"))
+            {
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    myLight.enabled = !myLight.enabled;
+                    myLight3.enabled = !myLight3.enabled;
+                }
+            }
+            if (hit.collider.CompareTag("Interact2"))
+            {
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    myLight2.enabled = !myLight2.enabled;
+                    myLight3.enabled = !myLight3.enabled;
+                }
+            }
+            if (hit.collider.CompareTag("Interact3"))
+            {
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    myLight2.enabled = !myLight2.enabled;
+                    myLight4.enabled = !myLight4.enabled;
+                }
+            }
+
+            if (myLight.enabled && myLight2.enabled && myLight3.enabled && myLight4.enabled)
+            {
+                Finish();
+            }
+            
         }
 
-        if (Input.GetKeyDown(KeyCode.G))
+        void Finish()
         {
-            myLight2.enabled = !myLight2.enabled;
-            myLight3.enabled = !myLight3.enabled;
+            Debug.Log("Enigme 3 reussit !!");
         }
-
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            myLight2.enabled = !myLight2.enabled;
-            myLight4.enabled = !myLight4.enabled;
-        }
-
+        
     }
 }
-
-// de base 2 lampes allumés 2 et 3, valve du milieu agi sur les 2 lampes du milieu(donc 2 et 3), la valve a gauche agi sur la 1 et 3, la valve a droite agi sur la 2 et 4.

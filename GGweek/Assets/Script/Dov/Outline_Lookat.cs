@@ -22,7 +22,7 @@ public class Outline_Lookat : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, dist))
         {
-            if (hit.collider.CompareTag("Interact"))
+            if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Interact"))
             {
                 currentController = hit.collider.GetComponent<Outline_Controller>();
 
