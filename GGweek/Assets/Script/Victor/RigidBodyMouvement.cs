@@ -74,7 +74,7 @@ using System.Collections;
                 Input.GetAxis("Vertical")
             ).normalized;
 
-            float speed = _realGrounded ? movementSpeed : airMovementSpeed;
+            float speed = IsGrounded() ? movementSpeed : airMovementSpeed;
             Vector3 vertical = axis.y * speed * Time.fixedDeltaTime * transform.forward;
             Vector3 horizontal = axis.x * speed * Time.fixedDeltaTime * transform.right;
            
@@ -92,7 +92,7 @@ using System.Collections;
         private void ApplyFriction()
         {
             Vector3 vel = _rb.velocity;
-            float target = _realGrounded ? friction : airFriction;
+            float target = IsGrounded() ? friction : airFriction;
             vel.x = Mathf.Lerp(vel.x, 0f, target * Time.fixedDeltaTime);
             vel.z = Mathf.Lerp(vel.z, 0f, target * Time.fixedDeltaTime);
             _rb.velocity = vel;
