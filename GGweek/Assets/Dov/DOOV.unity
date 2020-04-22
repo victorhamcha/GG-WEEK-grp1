@@ -1326,7 +1326,7 @@ GameObject:
   - component: {fileID: 667499722}
   m_Layer: 11
   m_Name: Sphere2
-  m_TagString: Interact
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2629,7 +2629,9 @@ MonoBehaviour:
   blur: {fileID: 0}
   objPos: {fileID: 0}
   items: []
+  inventaireOn: 0
   icons: []
+  _using: 0
 --- !u!114 &1084251324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3142,7 +3144,7 @@ GameObject:
   - component: {fileID: 1550928930}
   m_Layer: 11
   m_Name: Sphere3
-  m_TagString: Interact
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3988,7 +3990,7 @@ GameObject:
   - component: {fileID: 2016748724}
   m_Layer: 11
   m_Name: Sphere1
-  m_TagString: Interact
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
