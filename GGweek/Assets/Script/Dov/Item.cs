@@ -11,7 +11,7 @@ public class Item : MonoBehaviour
     [Header("HightLight")]
     public Color OutlineColor;
     private MeshRenderer rendererr;
-    public List<Item> pusslePiece = new List<Item>();
+    public Item pusslePiece;
 
     
 

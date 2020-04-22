@@ -11,6 +11,7 @@ public class Grabbing : MonoBehaviour
     public LayerMask grabable;
     public bool isGrabbing = false;
     public GameObject grabed;
+    public GameObject inHand;
     public GameObject blur;
     public Transform objPos;
     Vector3 mPrevPos = Vector3.zero;
@@ -18,15 +19,14 @@ public class Grabbing : MonoBehaviour
     public List<Item> items = new List<Item>();
     private bool inventaireOn=false;
     public List<Button> icons = new List<Button>();
-    public List<GameObject> button = new List<GameObject>();
     private Item prevItem;
     private Item currentItem;
-    private int puzzling = 0;
 
+    private bool _using;
     // public Slider zoom;
     void Start()
     {
-     
+      
     }
 
     // Update is called once per frame
@@ -44,6 +44,10 @@ public class Grabbing : MonoBehaviour
             if(!inventaireOn)
             {
                 OpenInv();
+                if(inHand!=null)
+                {
+                    DropObject(inHand);
+                }
             }
             else
             {
@@ -55,33 +59,51 @@ public class Grabbing : MonoBehaviour
 
         HandleLookAtRay(ray);
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && Physics.Raycast(ray, out RaycastHit hit, 3, grabable) && items.Count<7&&!isGrabbing&&!inventaireOn)
+        if ( Physics.Raycast(ray, out RaycastHit hit, 3, grabable) && items.Count<7&&!isGrabbing&&!inventaireOn&&!_using)
         {
-            
-            addItem(hit.transform.gameObject.GetComponent<Item>());
+            if(Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                inHand=Use(hit.transform.gameObject);
+            }
+            else if(Input.GetKeyDown(KeyCode.Mouse1))
+            {
+                addItem(hit.transform.gameObject.GetComponent<Item>());
+            }
+           
         }
      
-
-        if (isGrabbing)
+        else if (isGrabbing)
         {
            if (Input.GetKeyDown(KeyCode.K))
            {
                 HideObject(grabed);
            }
-           else if (Input.GetKeyDown(KeyCode.F))
+           else if (Input.GetKeyDown(KeyCode.E))
            {
                 DropItem(grabed.GetComponent<Item>());
            }
-
-
+            else if (Input.GetKeyDown(KeyCode.F))
+            {
+               inHand= Use(grabed);
+                CloseInv();
+            }
+        }
+        else if(_using && !inventaireOn)
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                DropObject(inHand);
+            }
+            else if (Input.GetKeyDown(KeyCode.Mouse1)&&items.Count < 7)
+            {
+                addItem(inHand.GetComponent<Item>());
+            }
         }
         float mouseX = Input.GetAxis("Mouse X") * 20;
         float mouseY = Input.GetAxis("Mouse Y") * 20;
 
         if (isGrabbing)
         {
-
-
             if (Input.GetKey(KeyCode.Mouse0))
             {
                 mPosDelta = Input.mousePosition - mPrevPos;
@@ -98,9 +120,6 @@ public class Grabbing : MonoBehaviour
                 //xRotation = mouseY;
                 //zRotation = mouseX;
                 // grabed.transform.localRotation = Quaternion.Euler(xRotation, 0f,zRotation);
-
-
-
             }
             mPrevPos = Input.mousePosition;
         }
@@ -109,12 +128,9 @@ public class Grabbing : MonoBehaviour
 
     private void HandleLookAtRay(Ray ray)
     {
-      
-       
-
         if (Physics.Raycast(ray, out RaycastHit hit, 3,grabable))
         {
-            if (!isGrabbing && !inventaireOn)
+            if (!isGrabbing && !inventaireOn&&!_using)
             {
                 currentItem = hit.collider.GetComponent<Item>();
 
@@ -165,7 +181,7 @@ public class Grabbing : MonoBehaviour
     }
     public void CloseInv()
     {
-        if(isGrabbing)
+        if(isGrabbing&&!_using)
         {
             HideObject(grabed);
         }
@@ -181,8 +197,15 @@ public class Grabbing : MonoBehaviour
         {
             HideObject(grabed);
         }
+        else if(_using)
+        {
+            DropObject(inHand);
+        }
         grabbed.SetActive(true);
+        
         grabbed.transform.position = objPos.position;
+        grabbed.GetComponent<Rigidbody>().isKinematic = true;
+        grabbed.GetComponent<Collider>().isTrigger = true;
         isGrabbing = true;
         return grabbed;
     }
@@ -204,11 +227,16 @@ public class Grabbing : MonoBehaviour
 
     public void addItem(Item item)
     {
+       
         items.Add(item);
+        if(_using)
+        {
+            _using = false;
+        }
+        item.gameObject.transform.parent = null;
         item.gameObject.GetComponent<Rigidbody>().isKinematic = true;
         item.gameObject.GetComponent<Collider>().isTrigger = true;
-        item.gameObject.SetActive(false);
-        
+        item.gameObject.SetActive(false);        
     }
 
     public void DropItem(Item item)
@@ -222,6 +250,14 @@ public class Grabbing : MonoBehaviour
         items.Remove(item);
 
        
+    }
+
+    public void DropObject(GameObject grabbed)
+    {
+        grabbed.GetComponent<Rigidbody>().isKinematic = false;
+        grabbed.GetComponent<Collider>().isTrigger = false;
+        grabbed.transform.parent = null;
+        _using = false;
     }
   
     public void UpdateIcons(int i)
@@ -252,6 +288,27 @@ public class Grabbing : MonoBehaviour
        
     }
 
+    public GameObject Use(GameObject grabbed)
+    {
+        if (_using)
+        {
+            DropObject(inHand);
+        }
+        if(isGrabbing)
+        {
+          DropItem(grabed.GetComponent<Item>());
+            
+         
+        }
+        grabbed.transform.SetParent(Camera.main.transform);
+        grabbed.GetComponent<Rigidbody>().isKinematic = true;
+        grabbed.GetComponent<Collider>().isTrigger = true;
+        grabbed.transform.position = objPos.position;
+        _using = true;
+        return grabbed;
+        
+    }
+
     public void Puzzled(int i)
     {
         if (items.Count > i)
@@ -259,48 +316,31 @@ public class Grabbing : MonoBehaviour
             if (grabed.GetComponent<Item>().inPuzzle)
             {
                 Item mbPiece = items[i];
-                bool puzzled = false;
-                for (int j = 0; j < grabed.GetComponent<Item>().pusslePiece.Count; j++)
-                {
-                    if (mbPiece == grabed.GetComponent<Item>().pusslePiece[j])
+               
+                
+                    if (mbPiece.gameObject.name == grabed.GetComponent<Item>().pusslePiece.gameObject.name)
                     {
 
-                        puzzled = true;
-                        break;
-                    }
-                }
-                if (puzzled)
-                {
-                    PuzzlePiece(mbPiece.gameObject);
-                    puzzling += 1;
-                }
-                else
-                {
-                    puzzling = 0;
-                    for (int j = 0; j < grabed.GetComponent<Item>().pusslePiece.Count; j++)
-                    {
-                        grabed.GetComponent<Item>().pusslePiece[j].gameObject.SetActive(false);
-                    }
-                    grabed = ShowObject(items[i].gameObject);
-                }
-                if (puzzling == grabed.GetComponent<Item>().pusslePiece.Count)
-                {
+                        GameObject thePiece = Instantiate(grabed.GetComponent<Item>().instance, new Vector3(1000, 1000, 1000), Quaternion.identity);
+                        
+                        GameObject destroyed = grabed;
+                        GameObject destroyed2 = items[i].gameObject;
+                        DropItem(grabed.GetComponent<Item>());
+                        DropItem(items[i]);
+                        Destroy(destroyed);
+                        Destroy(destroyed2);
+                        addItem(thePiece.GetComponent<Item>());
+                        grabed = ShowObject(thePiece);
+                        inHand = null;
 
-                    GameObject thePiece = Instantiate(grabed.GetComponent<Item>().instance, new Vector3(1000, 1000, 1000), Quaternion.identity);
-                    List<Item> destroyItem = new List<Item>();
-                    for (int j = 0; j < grabed.GetComponent<Item>().pusslePiece.Count; j++)
-                    {
-                        destroyItem.Add(grabed.GetComponent<Item>().pusslePiece[j]);
-                        DropItem(grabed.GetComponent<Item>().pusslePiece[j]);
-                        Destroy(destroyItem[j].gameObject);
                     }
-                    GameObject destroyed = grabed;
-                    DropItem(grabed.GetComponent<Item>());
-                    Destroy(destroyed);
-                    addItem(thePiece.GetComponent<Item>());
-                    grabed = ShowObject(thePiece);
+                    else
+                    {
+                        grabed = ShowObject(items[i].gameObject);
+                    }
 
-                }
+
+              
             }
             else
             {
