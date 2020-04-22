@@ -8,6 +8,7 @@ TagManager:
   - Interact1
   - Interact2
   - Interact3
+  - bobine
   layers:
   - Default
   - TransparentFX
