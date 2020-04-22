@@ -4,10 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Interact
-  - Interact1
-  - Interact2
-  - Interact3
   - bobine
   layers:
   - Default
