@@ -38,6 +38,7 @@ public class NewProjector : MonoBehaviour
             {
                 if (bobine != null)
                 {
+                    bobine.SetActive(true);
                     grab.DropObject(grab.inHand);
                     GameObject nextInHand = bobine;
                     bobine = bobineNear;
@@ -66,8 +67,9 @@ public class NewProjector : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.Mouse0)&&!grab._using)
             {
-                if (!grab._using)
+                if (!grab._using&&bobine!=null)
                 {
+                    bobine.SetActive(true);
                     grab.inHand = grab.Use(bobine);
                     bobine = null;
                     screen.clip = null;
