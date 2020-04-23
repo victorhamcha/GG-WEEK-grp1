@@ -21,6 +21,7 @@ public class Grabbing : MonoBehaviour
     public List<Button> icons = new List<Button>();
     private Item prevItem;
     private Item currentItem;
+    public GameObject inventaire;
 
     public bool _using;
     // public Slider zoom;
@@ -176,6 +177,7 @@ public class Grabbing : MonoBehaviour
         GetComponent<Rigidbody>().velocity = Vector3.zero;
         Cursor.lockState = CursorLockMode.None;
         blur.SetActive(true);
+        inventaire.SetActive(true);
         Camera.main.transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, Camera.main.transform.eulerAngles.z);
         inventaireOn = true;
     }
@@ -185,8 +187,10 @@ public class Grabbing : MonoBehaviour
         {
             HideObject(grabed);
         }
+
         GetComponent<RigidBodyMouvement>().canMove = true;   
         Cursor.lockState = CursorLockMode.Locked;
+        inventaire.SetActive(false);
         blur.SetActive(false);
         inventaireOn = false;
     }
