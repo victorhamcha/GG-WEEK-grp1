@@ -34,17 +34,25 @@ public class NewProjector : MonoBehaviour
         
         if(near)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 if (bobine != null)
                 {
-                    bobine.GetComponent<Rigidbody>().isKinematic = false;
+                    grab.DropObject(grab.inHand);
+                    GameObject nextInHand = bobine;
+                    bobine = bobineNear;
+                    grab.inHand = grab.Use(nextInHand);
+                }
+                else
+                {
+                    grab.DropObject(grab.inHand);                 
+                    bobine = bobineNear;                  
                 }
                 Debug.Log("change");
-                bobine = bobineNear;
                 bobine.GetComponent<Rigidbody>().isKinematic = true;
                 bobine.transform.position = projector.position;
                 ChangeVideo(video[int.Parse(bobine.name)]);
+                bobine.SetActive(false);
             }
         }
         
@@ -56,7 +64,7 @@ public class NewProjector : MonoBehaviour
                 near = true;
                 bobineNear= grab.inHand;
             }
-            else if (Input.GetKeyDown(KeyCode.A)&&!grab._using)
+            else if (Input.GetKeyDown(KeyCode.Mouse0)&&!grab._using)
             {
                 if (!grab._using)
                 {
