@@ -10346,7 +10346,7 @@ VideoPlayer:
   m_AspectRatio: 2
   m_DataSource: 0
   m_PlaybackSpeed: 1
-  m_AudioOutputMode: 2
+  m_AudioOutputMode: 1
   m_TargetAudioSources:
   - {fileID: 0}
   m_DirectAudioVolumes:
@@ -10525,9 +10525,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   video:
-  - {fileID: 32900000, guid: 71ebf54bdd5f8e64486f1f1d818cbf51, type: 3}
-  - {fileID: 32900000, guid: 3213db7d9eabfee4b8691d1487eb308b, type: 3}
-  - {fileID: 32900000, guid: 63a3276f76fbd86468286be0cd3458c2, type: 3}
+  - {fileID: 32900000, guid: 1c97f5be534b1ad48a6d96beb5d6839e, type: 3}
+  - {fileID: 32900000, guid: 79f37ddfcecded944a52a27ebe2eae8c, type: 3}
+  - {fileID: 32900000, guid: 9d452a3878751c4449f3c4cc37c85a9f, type: 3}
+  audio:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &1439309645
 PrefabInstance:
   m_ObjectHideFlags: 0

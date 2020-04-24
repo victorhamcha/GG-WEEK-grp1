@@ -239,7 +239,7 @@ public class Scene1 : MonoBehaviour
 
 
             }
-            if (construct && (barometre.position - player.position).sqrMagnitude < distance * distance * 2 && !grab.inventaireOn)
+            if (construct && (barometre.position - player.position).sqrMagnitude < distance * distance * 3 && !grab.inventaireOn)
             {
                 if (Input.GetKeyDown(KeyCode.F))
                 {

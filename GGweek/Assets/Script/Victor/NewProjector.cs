@@ -12,6 +12,7 @@ public class NewProjector : MonoBehaviour
     public LayerMask projectable;
     private VideoPlayer screen;
     public VideoClip[] video = new VideoClip[3];
+    public AudioSource[] audio = new AudioSource[3];
     private GameObject bobine;
     private GameObject bobineNear;
     private Grabbing grab;
