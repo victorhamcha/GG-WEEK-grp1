@@ -219,7 +219,7 @@ public class Scene1 : MonoBehaviour
 
             }
 
-            if (doorOpen && (light.position - player.position).sqrMagnitude < distance * distance && !grab.inventaireOn)
+            if (doorOpen && (light.position - player.position).sqrMagnitude < distance * distance*4 && !grab.inventaireOn)
             {
                 if (lightAndAnimation.finish)
                 {
