@@ -12,7 +12,8 @@ public class NewProjector : MonoBehaviour
     public LayerMask projectable;
     private VideoPlayer screen;
     public VideoClip[] video = new VideoClip[3];
-    public AudioSource[] audio = new AudioSource[3];
+    public AudioClip[] clip = new AudioClip[3];
+    public AudioSource audio;
     private GameObject bobine;
     private GameObject bobineNear;
     private Grabbing grab;
@@ -68,7 +69,7 @@ public class NewProjector : MonoBehaviour
                 bobine.GetComponent<Rigidbody>().isKinematic = true;
                 bobine.transform.position = projector.position;
                 ChangeVideo(video[int.Parse(bobine.name)]);
-               
+                audio.clip = clip[int.Parse(bobine.name)];
                 bobine.SetActive(false);
             }
         }
@@ -94,5 +95,6 @@ public class NewProjector : MonoBehaviour
     public void ChangeVideo(VideoClip video)
     { 
         screen.clip = video;
+        
     }
 }
