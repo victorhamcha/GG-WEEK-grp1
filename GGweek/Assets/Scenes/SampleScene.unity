@@ -4275,6 +4275,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6894165106327275323, guid: ece747ac62abfae4aaef0c8fe328ee0c,
+        type: 3}
+      propertyPath: mouseSnesy
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6894165107161250406, guid: ece747ac62abfae4aaef0c8fe328ee0c,
         type: 3}
       propertyPath: icons.Array.size
