@@ -51,26 +51,14 @@ public class NewProjector : MonoBehaviour
         if(near)
         {
             if (Input.GetKeyDown(KeyCode.F))
-            {
-                if (bobine != null)
-                {
-                    bobine.SetActive(true);
-                    grab.DropObject(grab.inHand);
-                    GameObject nextInHand = bobine;
-                    bobine = bobineNear;
-                    grab.inHand = grab.Use(nextInHand);
-                }
-                else
-                {
-                    grab.DropObject(grab.inHand);                 
-                    bobine = bobineNear;                  
-                }
+            {            
+                bobine = bobineNear;                  
                 Debug.Log("change");
-                bobine.GetComponent<Rigidbody>().isKinematic = true;
-                bobine.transform.position = projector.position;
                 ChangeVideo(video[int.Parse(bobine.name)]);
                 audio.clip = clip[int.Parse(bobine.name)];
-                bobine.SetActive(false);
+                GameObject destroyed = grab.inHand;
+                grab.DropObject(grab.inHand);
+                Destroy(destroyed);
             }
         }
         

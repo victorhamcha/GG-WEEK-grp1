@@ -41,41 +41,45 @@ public class LightController : MonoBehaviour
 
         if  (Physics.Raycast(ray, out RaycastHit hit, dist, lighter))
         {
-            if (hit.collider.gameObject.name == "ValveLampe1")
+            if(!finish)
             {
-                if (Input.GetKeyDown(KeyCode.F))
+                if (hit.collider.gameObject.name == "ValveLampe1")
                 {
-                    Debug.Log("1");
-                    myLight.enabled = !myLight.enabled;
-                    myLight3.enabled = !myLight3.enabled;
-                    
-                }
-            }
-            if (hit.collider.gameObject.name == "ValveLampe2")
-            {
-                if (Input.GetKeyDown(KeyCode.F))
-                {
-                    Debug.Log("2");
-                    myLight2.enabled = !myLight2.enabled;
-                    myLight3.enabled = !myLight3.enabled;
-                 
-                }
+                    if (Input.GetKeyDown(KeyCode.F))
+                    {
+                        Debug.Log("1");
+                        myLight.enabled = !myLight.enabled;
+                        myLight3.enabled = !myLight3.enabled;
 
-                if (animShake.GetBool("canShake2") == true)
+                    }
+                }
+                if (hit.collider.gameObject.name == "ValveLampe2")
                 {
-                    StartCoroutine(Shaking2());
+                    if (Input.GetKeyDown(KeyCode.F))
+                    {
+                        Debug.Log("2");
+                        myLight2.enabled = !myLight2.enabled;
+                        myLight3.enabled = !myLight3.enabled;
+
+                    }
+
+                    if (animShake.GetBool("canShake2") == true)
+                    {
+                        StartCoroutine(Shaking2());
+                    }
+                }
+                if (hit.collider.gameObject.name == "ValveLampe3")
+                {
+                    if (Input.GetKeyDown(KeyCode.F))
+                    {
+                        Debug.Log("1");
+                        myLight2.enabled = !myLight2.enabled;
+                        myLight4.enabled = !myLight4.enabled;
+                        animShake.SetBool("canShake", true);
+                    }
                 }
             }
-            if (hit.collider.gameObject.name == "ValveLampe3")
-            {
-                if (Input.GetKeyDown(KeyCode.F))
-                {
-                    Debug.Log("1");
-                    myLight2.enabled = !myLight2.enabled;
-                    myLight4.enabled = !myLight4.enabled;
-                    animShake.SetBool("canShake", true);
-                }
-            }
+            
 
          
 

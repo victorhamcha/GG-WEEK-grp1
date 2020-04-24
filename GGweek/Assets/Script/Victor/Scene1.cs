@@ -193,6 +193,9 @@ public class Scene1 : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.F) && grab.inHand.name == "clé1(Clone)" && !doorOpen)
                 {
                     //anim Porte
+                    GameObject destroyed = grab.inHand;
+                    grab.DropObject(grab.inHand);
+                    Destroy(destroyed);
                     porte1.gameObject.SetActive(false);
                     doorOpen = true;
                 }
