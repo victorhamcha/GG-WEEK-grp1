@@ -173,7 +173,7 @@ public class Scene1 : MonoBehaviour
                     {
                         guidonOn = false;
                         Drop(bobine2, boutDeClé, meuble);
-                        lightAndAnimation.animShake.SetBool("canShake2", true);
+                        lightAndAnimation.animShake.SetBool("canShake", true);
                         helpTxt.text = "Quelque chose est tombée du meuble";
                         Debug.Log("yeapa");
 
@@ -219,14 +219,13 @@ public class Scene1 : MonoBehaviour
 
             }
 
-            if (doorOpen && (light.position - player.position).sqrMagnitude < distance * distance*4 && !grab.inventaireOn)
-            {
+          
                 if (lightAndAnimation.finish)
                 {
                     helpTxt.text = "Essayons de partir maintenant!";
                     enigme = true;
                 }
-            }
+            
 
 
         }
@@ -275,7 +274,7 @@ public class Scene1 : MonoBehaviour
                 }
             }
         }
-        if (((((vane.position - player.position).sqrMagnitude < distance * distance)||((projecteur.position - player.position).sqrMagnitude < distance * distance*2) || ((barometre.position - player.position).sqrMagnitude < distance * distance*3) || ((guidon.position - player.position).sqrMagnitude < distance * distance )|| (porte1.position - player.position).sqrMagnitude < distance * distance&&!doorOpen) || ((light.position - player.position).sqrMagnitude < distance * distance)||((projecteur.position - player.position).sqrMagnitude < distance * distance) || ((barometre.position - player.position).sqrMagnitude < distance * distance)) && !grab.inventaireOn)
+        if (((((vane.position - player.position).sqrMagnitude < distance * distance)||((projecteur.position - player.position).sqrMagnitude < distance * distance*2) || ((barometre.position - player.position).sqrMagnitude < distance * distance*3) || ((guidon.position - player.position).sqrMagnitude < distance * distance )|| (porte1.position - player.position).sqrMagnitude < distance * distance&&!doorOpen) || ((light.position - player.position).sqrMagnitude < distance * distance*3)||((projecteur.position - player.position).sqrMagnitude < distance * distance) || ((barometre.position - player.position).sqrMagnitude < distance * distance)) && !grab.inventaireOn)
         {
             actonTxt.text = "Utiliser F";
         }
