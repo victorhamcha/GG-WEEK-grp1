@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="135">
 	<RootPaths>
-		<ProjectRoot>C:\Users\Dovbe\OneDrive\Documents\WwiseProjects\Projet_1\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\Dovbe\OneDrive\Documents\WwiseProjects\Projet_1\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\Dovbe\OneDrive\Documents\WwiseProjects\Projet_1\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\Dovbe\OneDrive\Bureau\Projet\GG Week\Projet_1\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Dovbe\OneDrive\Bureau\Projet\GG Week\Projet_1\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Dovbe\OneDrive\Bureau\Projet\GG Week\Projet_1\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\Dovbe\OneDrive\Documents\WwiseProjects\Projet_1\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\Dovbe\OneDrive\Bureau\Projet\GG Week\Projet_1\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -66,7 +66,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Play_Music" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Play_Music" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="871091986" Language="SFX">
 							<ShortName>Fond sonore.wav</ShortName>

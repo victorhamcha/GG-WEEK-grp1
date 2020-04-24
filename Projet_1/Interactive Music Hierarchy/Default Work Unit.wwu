@@ -103,6 +103,15 @@
 							<PropertyList>
 								<Property Name="LoopCount" Type="int16" Value="0"/>
 							</PropertyList>
+							<ChildrenList>
+								<MusicPlaylistItem Name="" ID="{3CB57C47-280C-46A6-B1EE-7F34B77B3C0F}" ShortID="989407035">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="Fond sonore" ID="{7E045418-3167-4FC2-85F8-EBDBE719F57C}"/>
+								</MusicPlaylistItem>
+							</ChildrenList>
 						</MusicPlaylistItem>
 					</Playlist>
 				</MusicPlaylistContainer>
