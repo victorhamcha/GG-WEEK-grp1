@@ -44,7 +44,6 @@ public class Scene1 : MonoBehaviour
         helpTxt.text = "Qu'est-ce qu'il se passe ou suis-je?";
         lightAndAnimation = FindObjectOfType<LightController>();
         lightAndAnimation.animShake.SetBool("canShake", true);
-       
 
     }
 
@@ -142,6 +141,7 @@ public class Scene1 : MonoBehaviour
                         }
                         if (valveOn)
                         {
+                            //son
                             smoke.SetActive(false);
 
                         }
