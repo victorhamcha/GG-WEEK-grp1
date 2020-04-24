@@ -249,6 +249,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01f49060197f9a84fbb0b26d96b25e88, type: 3}
+--- !u!1 &13130419 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7034214603059159811, guid: 6ac90de6d4ae43b41aedf0b817e094fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 2094934684}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &35515848 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1754399108906658059, guid: 6cafd31d0dc732c41b62b89367a248f9,
@@ -1395,7 +1401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e003aeb61d7725345a0ed223a53c3c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 0}
+  pauseMenuUI: {fileID: 13130419}
 --- !u!114 &162399712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1858,6 +1864,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 190483716}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &200634119 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7034214603350536635, guid: 6ac90de6d4ae43b41aedf0b817e094fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 2094934684}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &209151725 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1232075287075944714, guid: fce049e47315f384d8f3133ea70147f0,
@@ -6086,6 +6104,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0091c15c155897e4296ef23318cddd76, type: 3}
+--- !u!114 &618941752 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7034214602642583886, guid: 6ac90de6d4ae43b41aedf0b817e094fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 2094934684}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &622617842 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3488059426255679257, guid: 9651166563e8afa4d9e192de91fd3871,
@@ -7734,11 +7764,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a07c8cfaa996a547aa5fa2f12ca3e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeGeneral: {fileID: 0}
-  volumeMusic: {fileID: 0}
-  volumeSFX: {fileID: 0}
+  volumeGeneral: {fileID: 200634119}
+  volumeMusic: {fileID: 618941752}
+  volumeSFX: {fileID: 1982446470}
   timer: 180
-  player: {fileID: 0}
+  player: {fileID: 419622886}
 --- !u!114 &767308781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18779,6 +18809,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: e67cab6d10668684b8d2b74bf6ce1e78, type: 3}
+--- !u!114 &1982446470 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7034214602827329166, guid: 6ac90de6d4ae43b41aedf0b817e094fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 2094934684}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2002036955 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 01f49060197f9a84fbb0b26d96b25e88,
@@ -20819,10 +20861,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 162399715}
     m_Modifications:
+    - target: {fileID: 7034214602642583886, guid: 6ac90de6d4ae43b41aedf0b817e094fa,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 767308780}
+    - target: {fileID: 7034214602642583886, guid: 6ac90de6d4ae43b41aedf0b817e094fa,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setVolumeMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 7034214602794279507, guid: 6ac90de6d4ae43b41aedf0b817e094fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7034214602827329166, guid: 6ac90de6d4ae43b41aedf0b817e094fa,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 767308780}
+    - target: {fileID: 7034214602827329166, guid: 6ac90de6d4ae43b41aedf0b817e094fa,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setVolumeSFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 7034214602957982963, guid: 6ac90de6d4ae43b41aedf0b817e094fa,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7034214602957982963, guid: 6ac90de6d4ae43b41aedf0b817e094fa,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7034214603059159811, guid: 6ac90de6d4ae43b41aedf0b817e094fa,
         type: 3}
       propertyPath: m_Name
       value: PauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7034214603059159811, guid: 6ac90de6d4ae43b41aedf0b817e094fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7034214603059159868, guid: 6ac90de6d4ae43b41aedf0b817e094fa,
         type: 3}
@@ -20928,6 +21010,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7034214603350536635, guid: 6ac90de6d4ae43b41aedf0b817e094fa,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 767308780}
+    - target: {fileID: 7034214603350536635, guid: 6ac90de6d4ae43b41aedf0b817e094fa,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setVolumeGen
+      objectReference: {fileID: 0}
+    - target: {fileID: 7034214604199690355, guid: 6ac90de6d4ae43b41aedf0b817e094fa,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7034214604199690355, guid: 6ac90de6d4ae43b41aedf0b817e094fa,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7034214604353335385, guid: 6ac90de6d4ae43b41aedf0b817e094fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7034214604614926402, guid: 6ac90de6d4ae43b41aedf0b817e094fa,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7034214604614926402, guid: 6ac90de6d4ae43b41aedf0b817e094fa,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ac90de6d4ae43b41aedf0b817e094fa, type: 3}
