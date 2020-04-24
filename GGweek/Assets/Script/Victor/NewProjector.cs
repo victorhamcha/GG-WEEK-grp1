@@ -32,21 +32,20 @@ public class NewProjector : MonoBehaviour
     void Update()
     {
       
-        if(bobine!=null)
-        {
-            if(bobine.name=="0"&&!scene.scene1)
+      
+            if(screen.clip==video[0]&&!scene.scene1)
             {
                 scene.scene1 = true;
             }
-            else if (bobine.name == "1" && !scene.scene2)
+            else if (screen.clip == video[1] && !scene.scene2)
             {
                 scene.scene2 = true;
             }
-            else if (bobine.name == "2" && !scene.scene3)
+            else if (screen.clip == video[2] && !scene.scene3)
             {
                 scene.scene3 = true;
             }
-        }
+        
         
         if(near)
         {
