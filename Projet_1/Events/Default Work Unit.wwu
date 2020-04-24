@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{6C8121F2-E7CC-4F2D-92CE-1CE89C3756F1}" SchemaVersion="97">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{6C8121F2-E7CC-4F2D-92CE-1CE89C3756F1}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="20"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<Event Name="Play_flippant" ID="{31602008-5A14-4983-A74E-28A6A34C536B}">
+					<ChildrenList>
+						<Action Name="" ID="{8554A0A6-77C2-4C0A-95C1-18F27B448600}" ShortID="260842368">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Flippant" ID="{AAAD38C0-6472-403E-8AB3-1EEB6BA13BBC}" WorkUnitID="{A3E03513-FC3E-47E9-8D83-3E026723752B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Baleine" ID="{4E0C556C-0111-4551-9FA8-BEADF5524905}">
+					<ChildrenList>
+						<Action Name="" ID="{67C61B64-84D7-4662-912C-74FDDEBF8A75}" ShortID="919734314">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Baleine" ID="{1716594A-92DF-4CAA-A0C1-49F1D2984DB6}" WorkUnitID="{A3E03513-FC3E-47E9-8D83-3E026723752B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Music" ID="{C4C409F1-6755-4C05-B0A2-E61A86A9880E}">
+					<ChildrenList>
+						<Action Name="" ID="{5D5FFB32-38FA-473B-90B5-7BAC3E89832C}" ShortID="870908739">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PL_Action" ID="{B6618061-988A-4FF5-AC81-BE6DDF7EEF27}" WorkUnitID="{A8BF1F26-5743-4111-B7E9-87ABC9B89FC6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Bruit_De_Pas" ID="{FBDCFBD7-F6BB-4CC9-8CF5-951E9C4E4E86}">
+					<ChildrenList>
+						<Action Name="" ID="{7DA7DB56-1B64-4F69-B349-F47CA1D3AF13}" ShortID="515896607">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Bruit_De_Pas" ID="{567BC768-B5DF-477C-8987-1DACF5550361}" WorkUnitID="{A3E03513-FC3E-47E9-8D83-3E026723752B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ampoule" ID="{A2C9A213-E150-44F3-8F5F-3BE0AD053409}">
+					<ChildrenList>
+						<Action Name="" ID="{059DE722-EF9D-41D7-9984-0B11B4CBDBA9}" ShortID="473809294">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Ampoule" ID="{7AD7BC8E-8D1B-4FF6-B6ED-ED6C6137FB75}" WorkUnitID="{A3E03513-FC3E-47E9-8D83-3E026723752B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Cri_Monstre" ID="{3D1C152E-A50F-4C88-90B8-69BA407A061B}">
+					<ChildrenList>
+						<Action Name="" ID="{06B89DA2-6050-41FB-8E9C-DC81873B1B53}" ShortID="562320022">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Cri_Monstre" ID="{A32230A3-5438-4089-BEFD-408549CA2335}" WorkUnitID="{A3E03513-FC3E-47E9-8D83-3E026723752B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Vapeur" ID="{1D7D02BB-CBC9-4017-A4D0-2DB92A72C9B4}">
+					<ChildrenList>
+						<Action Name="" ID="{D7627ECB-401C-4CAB-96C2-5D92FFF0F911}" ShortID="463291722">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Vapeur" ID="{23D3B067-570A-44C6-AC7B-82F925B3474F}" WorkUnitID="{A3E03513-FC3E-47E9-8D83-3E026723752B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Tuyau" ID="{B680A67A-855F-4D40-A9FF-8A0186C82EE3}">
+					<ChildrenList>
+						<Action Name="" ID="{7D5C63D3-34B4-4CF7-9A98-3B9649D76631}" ShortID="333358886">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Tuyau" ID="{EE9BC377-3F39-42E6-A716-10E7D452C361}" WorkUnitID="{A3E03513-FC3E-47E9-8D83-3E026723752B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Valve" ID="{B3EE2465-23D5-4EBD-A5B8-8F8C558A5E96}">
+					<ChildrenList>
+						<Action Name="" ID="{2F83B369-923C-499E-B04B-92EA18A5613C}" ShortID="574597719">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Valve" ID="{11B5E50D-3B5C-4C85-A12E-834C6F0933F5}" WorkUnitID="{A3E03513-FC3E-47E9-8D83-3E026723752B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

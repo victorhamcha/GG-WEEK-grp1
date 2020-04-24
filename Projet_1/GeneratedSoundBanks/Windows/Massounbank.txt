@@ -1,0 +1,22 @@
+Event	ID	Name			Wwise Object Path	Notes
+	522764323	Play_Cri_Monstre			\Default Work Unit\Play_Cri_Monstre	
+	1518339268	Play_Valve			\Default Work Unit\Play_Valve	
+	1616188737	Play_Vapeur			\Default Work Unit\Play_Vapeur	
+	2834198710	Play_Tuyau			\Default Work Unit\Play_Tuyau	
+	2932040671	Play_Music			\Default Work Unit\Play_Music	
+	3230183688	Play_flippant			\Default Work Unit\Play_flippant	
+	3372213631	Play_Bruit_De_Pas			\Default Work Unit\Play_Bruit_De_Pas	
+	3704302390	Play_Baleine			\Default Work Unit\Play_Baleine	
+	3714930449	Play_Ampoule			\Default Work Unit\Play_Ampoule	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	146483888	Tuyau	C:\Users\Dovbe\OneDrive\Documents\WwiseProjects\Projet_1\.cache\Windows\SFX\Tuyau_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\RC_Tuyau\Tuyau		15103
+	249975367	Bruit flippant	C:\Users\Dovbe\OneDrive\Documents\WwiseProjects\Projet_1\.cache\Windows\SFX\Bruit flippant_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\RC_Flippant\Bruit flippant		422822
+	266921102	ChantBaleine	C:\Users\Dovbe\OneDrive\Documents\WwiseProjects\Projet_1\.cache\Windows\SFX\ChantBaleine_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\RC_Baleine\ChantBaleine		657327
+	308093060	Cri monstre marin	C:\Users\Dovbe\OneDrive\Documents\WwiseProjects\Projet_1\.cache\Windows\SFX\Cri monstre marin_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\RC_Cri_Monstre\Cri monstre marin		185371
+	376182921	Bruit de pas	C:\Users\Dovbe\OneDrive\Documents\WwiseProjects\Projet_1\.cache\Windows\SFX\Bruit de pas_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\RC_Bruit_De_Pas\Bruit de pas		154551
+	431017858	Ampoule_qui_sallume	C:\Users\Dovbe\OneDrive\Documents\WwiseProjects\Projet_1\.cache\Windows\SFX\Ampoule_qui_sallume_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\RC_Ampoule\Ampoule_qui_sallume		6929
+	840771541	Vapeur	C:\Users\Dovbe\OneDrive\Documents\WwiseProjects\Projet_1\.cache\Windows\SFX\Vapeur_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\RC_Vapeur\Vapeur		96818
+	871091986	Fond sonore	C:\Users\Dovbe\OneDrive\Documents\WwiseProjects\Projet_1\.cache\Windows\SFX\Fond sonore_F2BF74AC.wem		\Interactive Music Hierarchy\Default Work Unit\PL_Action\Fond sonore\Fond sonore		174175
+	1048312052	Valve qui tourne	C:\Users\Dovbe\OneDrive\Documents\WwiseProjects\Projet_1\.cache\Windows\SFX\Valve qui tourne_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\RC_Valve\Valve qui tourne		187653
+

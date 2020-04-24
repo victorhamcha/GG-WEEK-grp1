@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9B7997FA-8956-4615-827F-9645A381D5B6}" SchemaVersion="97">
+	<GameParameters>
+		<WorkUnit Name="Default Work Unit" ID="{9B7997FA-8956-4615-827F-9645A381D5B6}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Audio_Settings" ID="{75261471-3889-465C-8238-FDAAD4E4744F}" ShortID="392563977">
+					<ChildrenList>
+						<GameParameter Name="RTPC_SFX_Volume" ID="{7993850D-DA98-4D10-9DEB-CDFDF8F5C4D8}"/>
+						<GameParameter Name="RTPC_Music_Volume" ID="{090E9240-4756-4077-870B-0EE4F84AA502}"/>
+						<GameParameter Name="RTPC_Main_Volume" ID="{57CBACF5-6B07-45FE-9A79-78B268D6A254}"/>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

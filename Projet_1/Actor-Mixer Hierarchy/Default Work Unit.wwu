@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A3E03513-FC3E-47E9-8D83-3E026723752B}" SchemaVersion="97">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{A3E03513-FC3E-47E9-8D83-3E026723752B}" PersistMode="Standalone">
+			<ChildrenList>
+				<RandomSequenceContainer Name="RC_Flippant" ID="{AAAD38C0-6472-403E-8AB3-1EEB6BA13BBC}" ShortID="747664083">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="18"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7045E412-3CDC-4509-958B-CAD45EA1FDA3}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX_Volume" ID="{BE2C19A6-5120-4D0E-8AFA-DBC28463E43F}" WorkUnitID="{2B834AE5-4D6F-4056-BB8A-66857362A3D9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Bruit flippant" ID="{BCAD530E-665E-40A3-BB6F-28C4C1AB5AB0}" ShortID="957992223">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7045E412-3CDC-4509-958B-CAD45EA1FDA3}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main_Volume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B834AE5-4D6F-4056-BB8A-66857362A3D9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Bruit flippant" ID="{B3251898-8B32-493B-8781-9B0011533058}">
+									<Language>SFX</Language>
+									<AudioFile>Bruit flippant.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="249975367"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Bruit flippant" ID="{B3251898-8B32-493B-8781-9B0011533058}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="RC_Baleine" ID="{1716594A-92DF-4CAA-A0C1-49F1D2984DB6}" ShortID="255947464">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="19"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7045E412-3CDC-4509-958B-CAD45EA1FDA3}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX_Volume" ID="{BE2C19A6-5120-4D0E-8AFA-DBC28463E43F}" WorkUnitID="{2B834AE5-4D6F-4056-BB8A-66857362A3D9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="ChantBaleine" ID="{10E2CFE8-95F5-4DC2-A911-D7CF94510EDC}" ShortID="205100709">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7045E412-3CDC-4509-958B-CAD45EA1FDA3}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main_Volume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B834AE5-4D6F-4056-BB8A-66857362A3D9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ChantBaleine" ID="{CC5A975C-512F-4C6D-849C-7DB08BA51114}">
+									<Language>SFX</Language>
+									<AudioFile>ChantBaleine.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="266921102"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ChantBaleine" ID="{CC5A975C-512F-4C6D-849C-7DB08BA51114}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="RC_Bruit_De_Pas" ID="{567BC768-B5DF-477C-8987-1DACF5550361}" ShortID="402342957">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="18"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7045E412-3CDC-4509-958B-CAD45EA1FDA3}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX_Volume" ID="{BE2C19A6-5120-4D0E-8AFA-DBC28463E43F}" WorkUnitID="{2B834AE5-4D6F-4056-BB8A-66857362A3D9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Bruit de pas" ID="{A138943F-F3AC-4ECF-BCBF-9F631239E913}" ShortID="202804224">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7045E412-3CDC-4509-958B-CAD45EA1FDA3}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main_Volume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B834AE5-4D6F-4056-BB8A-66857362A3D9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Bruit de pas" ID="{9A22BB09-2EBC-4FCB-842D-DDC75D5D836E}">
+									<Language>SFX</Language>
+									<AudioFile>Bruit de pas.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="376182921"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Bruit de pas" ID="{9A22BB09-2EBC-4FCB-842D-DDC75D5D836E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="RC_Tuyau" ID="{EE9BC377-3F39-42E6-A716-10E7D452C361}" ShortID="605582920">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="18"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7045E412-3CDC-4509-958B-CAD45EA1FDA3}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX_Volume" ID="{BE2C19A6-5120-4D0E-8AFA-DBC28463E43F}" WorkUnitID="{2B834AE5-4D6F-4056-BB8A-66857362A3D9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Tuyau" ID="{957F59EB-6C2F-4688-818E-4043AFE1204B}" ShortID="1003927767">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7045E412-3CDC-4509-958B-CAD45EA1FDA3}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main_Volume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B834AE5-4D6F-4056-BB8A-66857362A3D9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Tuyau" ID="{53089C68-E9AA-4D0D-ADF4-10ACEE392A7F}">
+									<Language>SFX</Language>
+									<AudioFile>Tuyau.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="146483888"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Tuyau" ID="{53089C68-E9AA-4D0D-ADF4-10ACEE392A7F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="RC_Valve" ID="{11B5E50D-3B5C-4C85-A12E-834C6F0933F5}" ShortID="640162520">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="18"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7045E412-3CDC-4509-958B-CAD45EA1FDA3}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX_Volume" ID="{BE2C19A6-5120-4D0E-8AFA-DBC28463E43F}" WorkUnitID="{2B834AE5-4D6F-4056-BB8A-66857362A3D9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Valve qui tourne" ID="{8F796CA1-552C-421F-8A56-471B0A38C64F}" ShortID="7289963">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7045E412-3CDC-4509-958B-CAD45EA1FDA3}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main_Volume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B834AE5-4D6F-4056-BB8A-66857362A3D9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Valve qui tourne" ID="{8FF9C303-008F-4641-9780-546B1CEC9E3C}">
+									<Language>SFX</Language>
+									<AudioFile>Valve qui tourne.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1048312052"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Valve qui tourne" ID="{8FF9C303-008F-4641-9780-546B1CEC9E3C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="RC_Ampoule" ID="{7AD7BC8E-8D1B-4FF6-B6ED-ED6C6137FB75}" ShortID="807418861">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="18"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7045E412-3CDC-4509-958B-CAD45EA1FDA3}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX_Volume" ID="{BE2C19A6-5120-4D0E-8AFA-DBC28463E43F}" WorkUnitID="{2B834AE5-4D6F-4056-BB8A-66857362A3D9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Ampoule_qui_sallume" ID="{4A04B261-B576-470E-BE54-D5C98B992743}" ShortID="8971097">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7045E412-3CDC-4509-958B-CAD45EA1FDA3}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main_Volume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B834AE5-4D6F-4056-BB8A-66857362A3D9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Ampoule_qui_sallume" ID="{C83838FB-BF75-40D3-B422-20F457A2797C}">
+									<Language>SFX</Language>
+									<AudioFile>Ampoule_qui_sallume.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="431017858"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Ampoule_qui_sallume" ID="{C83838FB-BF75-40D3-B422-20F457A2797C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="RC_Cri_Monstre" ID="{A32230A3-5438-4089-BEFD-408549CA2335}" ShortID="382585157">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="18"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7045E412-3CDC-4509-958B-CAD45EA1FDA3}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX_Volume" ID="{BE2C19A6-5120-4D0E-8AFA-DBC28463E43F}" WorkUnitID="{2B834AE5-4D6F-4056-BB8A-66857362A3D9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Cri monstre marin" ID="{DA9C4550-206D-467F-ACCC-0FE57D99D581}" ShortID="39981599">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7045E412-3CDC-4509-958B-CAD45EA1FDA3}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main_Volume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B834AE5-4D6F-4056-BB8A-66857362A3D9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Cri monstre marin" ID="{70C24C07-6CF0-472D-BAEE-55D3B3EAD82B}">
+									<Language>SFX</Language>
+									<AudioFile>Cri monstre marin.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="308093060"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Cri monstre marin" ID="{70C24C07-6CF0-472D-BAEE-55D3B3EAD82B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="RC_Vapeur" ID="{23D3B067-570A-44C6-AC7B-82F925B3474F}" ShortID="511285856">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="18"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7045E412-3CDC-4509-958B-CAD45EA1FDA3}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX_Volume" ID="{BE2C19A6-5120-4D0E-8AFA-DBC28463E43F}" WorkUnitID="{2B834AE5-4D6F-4056-BB8A-66857362A3D9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Vapeur" ID="{0B8AE2F3-347B-45F0-8BF6-72DE443A421C}" ShortID="506831338">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7045E412-3CDC-4509-958B-CAD45EA1FDA3}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main_Volume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B834AE5-4D6F-4056-BB8A-66857362A3D9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Vapeur" ID="{7FCB6480-D2E5-4753-A43E-A8C287950AB3}">
+									<Language>SFX</Language>
+									<AudioFile>Vapeur.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="840771541"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Vapeur" ID="{7FCB6480-D2E5-4753-A43E-A8C287950AB3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

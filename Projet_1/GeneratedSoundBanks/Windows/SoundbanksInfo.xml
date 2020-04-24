@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="135">
+	<RootPaths>
+		<ProjectRoot>C:\Users\Dovbe\OneDrive\Documents\WwiseProjects\Projet_1\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Dovbe\OneDrive\Documents\WwiseProjects\Projet_1\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Dovbe\OneDrive\Documents\WwiseProjects\Projet_1\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\Dovbe\OneDrive\Documents\WwiseProjects\Projet_1\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<GameParameters>
+				<GameParameter Id="932301089" Name="RTPC_SFX_Volume" ObjectPath="\Game Parameters\Default Work Unit\Audio_Settings\RTPC_SFX_Volume"/>
+				<GameParameter Id="1596647065" Name="RTPC_Music_Volume" ObjectPath="\Game Parameters\Default Work Unit\Audio_Settings\RTPC_Music_Volume"/>
+				<GameParameter Id="1856500933" Name="RTPC_Main_Volume" ObjectPath="\Game Parameters\Default Work Unit\Audio_Settings\RTPC_Main_Volume"/>
+			</GameParameters>
+		</SoundBank>
+		<SoundBank Id="3853173399" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Massounbank</ObjectPath>
+			<ShortName>Massounbank</ShortName>
+			<Path>Massounbank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3714930449" Name="Play_Ampoule" ObjectPath="\Events\Default Work Unit\Play_Ampoule" DurationType="OneShot" DurationMin="0.110567" DurationMax="0.110567">
+					<IncludedMemoryFiles>
+						<File Id="431017858" Language="SFX">
+							<ShortName>Ampoule_qui_sallume.wav</ShortName>
+							<Path>SFX\Ampoule_qui_sallume_32513D82.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3704302390" Name="Play_Baleine" ObjectPath="\Events\Default Work Unit\Play_Baleine" DurationType="OneShot" DurationMin="31.552879" DurationMax="31.552879">
+					<IncludedMemoryFiles>
+						<File Id="266921102" Language="SFX">
+							<ShortName>ChantBaleine.wav</ShortName>
+							<Path>SFX\ChantBaleine_32513D82.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3372213631" Name="Play_Bruit_De_Pas" ObjectPath="\Events\Default Work Unit\Play_Bruit_De_Pas" DurationType="OneShot" DurationMin="6.254807" DurationMax="6.254807">
+					<IncludedMemoryFiles>
+						<File Id="376182921" Language="SFX">
+							<ShortName>Bruit de pas.wav</ShortName>
+							<Path>SFX\Bruit de pas_32513D82.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="522764323" Name="Play_Cri_Monstre" ObjectPath="\Events\Default Work Unit\Play_Cri_Monstre" DurationType="OneShot" DurationMin="9.817302" DurationMax="9.817302">
+					<IncludedMemoryFiles>
+						<File Id="308093060" Language="SFX">
+							<ShortName>Cri monstre marin.wav</ShortName>
+							<Path>SFX\Cri monstre marin_32513D82.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3230183688" Name="Play_flippant" ObjectPath="\Events\Default Work Unit\Play_flippant" DurationType="OneShot" DurationMin="18.346146" DurationMax="18.346146">
+					<IncludedMemoryFiles>
+						<File Id="249975367" Language="SFX">
+							<ShortName>Bruit flippant.wav</ShortName>
+							<Path>SFX\Bruit flippant_32513D82.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Play_Music" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<IncludedMemoryFiles>
+						<File Id="871091986" Language="SFX">
+							<ShortName>Fond sonore.wav</ShortName>
+							<Path>SFX\Fond sonore_F2BF74AC.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2834198710" Name="Play_Tuyau" ObjectPath="\Events\Default Work Unit\Play_Tuyau" DurationType="OneShot" DurationMin="0.576916" DurationMax="0.576916">
+					<IncludedMemoryFiles>
+						<File Id="146483888" Language="SFX">
+							<ShortName>Tuyau.wav</ShortName>
+							<Path>SFX\Tuyau_32513D82.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1518339268" Name="Play_Valve" ObjectPath="\Events\Default Work Unit\Play_Valve" DurationType="OneShot" DurationMin="7.581723" DurationMax="7.581723">
+					<IncludedMemoryFiles>
+						<File Id="1048312052" Language="SFX">
+							<ShortName>Valve qui tourne.wav</ShortName>
+							<Path>SFX\Valve qui tourne_32513D82.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1616188737" Name="Play_Vapeur" ObjectPath="\Events\Default Work Unit\Play_Vapeur" DurationType="OneShot" DurationMin="2.932698" DurationMax="2.932698">
+					<IncludedMemoryFiles>
+						<File Id="840771541" Language="SFX">
+							<ShortName>Vapeur.wav</ShortName>
+							<Path>SFX\Vapeur_32513D82.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
