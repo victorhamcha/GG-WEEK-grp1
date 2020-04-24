@@ -40,8 +40,18 @@ public class Grabbing : MonoBehaviour
        }
       
 
-      
-      
+        if(inHand!=null)
+        {
+            inHand.transform.position = objPos.position;
+
+        }
+
+        if (grabed != null)
+        {
+            grabed.transform.position = objPos.position;
+
+        }
+
         Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
 
         HandleLookAtRay(ray);
@@ -307,6 +317,10 @@ public class Grabbing : MonoBehaviour
         if (items.Count > i&&!isGrabbing)
         {
             grabed = ShowObject(items[i].gameObject);
+        }
+        else if(items.Count-1<i)
+        {
+            HideObject(grabed);
         }
         else
         {

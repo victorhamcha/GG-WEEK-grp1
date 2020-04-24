@@ -130,5 +130,5 @@ MonoBehaviour:
   instance: {fileID: -927199367670048503, guid: 0ba50df49bf5d1d48ace30b10f316582,
     type: 3}
   OutlineColor: {r: 0, g: 0, b: 0, a: 0}
-  pusslePiece: {fileID: 498335627279303170, guid: 358d43a388abe574b8d982ea9d156290,
+  pusslePiece: {fileID: 7106503297681154926, guid: d6b15cad783fa6a4bbd04456994bca83,
     type: 3}

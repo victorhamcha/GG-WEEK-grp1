@@ -35,14 +35,17 @@ public class Scene1 : MonoBehaviour
     public GameObject bobine3;
     public GameObject engrenage3;
     bool enigme = false;
-    bool construct = false;
+    public bool construct = false;
     bool lastThing = false;
     public GameObject barometrepart;
-
+    private LightController lightAndAnimation;
     void Start()
     {
-        helpTxt.text = "Qu'est-ce que je fais ici il faut que je me rappelle!";
-      
+        helpTxt.text = "Qu'est-ce qu'il se passe ou suis-je?";
+        lightAndAnimation = FindObjectOfType<LightController>();
+        lightAndAnimation.animShake.SetBool("canShake", true);
+       
+
     }
 
     // Update is called once per frame
@@ -167,10 +170,11 @@ public class Scene1 : MonoBehaviour
                     {
                         guidonOn = false;
                         Drop(bobine2, boutDeClé, meuble);
+                        lightAndAnimation.animShake.SetBool("canShake2", true);
                         helpTxt.text = "Quelque chose est tombée du meuble";
                         Debug.Log("yeapa");
-                        
-                        //Put Camera Animations
+
+                      
                     }
                     
                 }
@@ -204,14 +208,14 @@ public class Scene1 : MonoBehaviour
                     helpTxt.text = "une nouvelle bobine est tombée du meuble";
                     Debug.Log("yeapa2");
 
-                    //Put Camera Animations
+                   lightAndAnimation.animShake.SetBool("canShake", true);
                 }
 
             }
 
             if (doorOpen && (light.position - player.position).sqrMagnitude < distance * distance && !grab.inventaireOn)
             {
-                if (FindObjectOfType<LightController>().finish)
+                if (lightAndAnimation.finish)
                 {
                     helpTxt.text = "Essayons de partir maintenant!";
                     enigme = true;
@@ -225,6 +229,7 @@ public class Scene1 : MonoBehaviour
         {
             if (scene2)
             {
+                lightAndAnimation.animShake.SetBool("canShake", true);
                 scene2 = false;
             }
             if ((projecteur.position - player.position).sqrMagnitude < distance * distance * 2 && !grab.inventaireOn && !construct)
@@ -232,19 +237,23 @@ public class Scene1 : MonoBehaviour
 
                 helpTxt.text = "Il ne me reste plus qu'à assembler les pièce du baromêtre";
 
+
             }
             if (construct && (barometre.position - player.position).sqrMagnitude < distance * distance * 2 && !grab.inventaireOn)
             {
                 if (Input.GetKeyDown(KeyCode.F))
                 {
                     lastThing = true;
+                    GameObject destroyed = grab.inHand;
+                    grab.DropObject(grab.inHand);
+                    Destroy(destroyed);
                     barometrepart.SetActive(true);
                     helpTxt.text = "Je peux enfin partir !";
                 }
             }
             if(grab.grabed!=null)
             {
-                if (grab.grabed.name == "engrenage1_2_3(Clone)" && !construct)
+                if (grab.grabed.name == "barometrefinie(Clone)" && !construct)
                 {
                     construct = true;
                 }
@@ -254,6 +263,7 @@ public class Scene1 : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.F))
                 {
+                    lightAndAnimation.animShake.SetBool("canShake", true);
                     Debug.Log("fin");
                 }
             }

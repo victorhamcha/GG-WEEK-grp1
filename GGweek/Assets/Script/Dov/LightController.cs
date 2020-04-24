@@ -28,8 +28,15 @@ public class LightController : MonoBehaviour
 
     private void Update()
     {
+        if (animShake.GetBool("canShake") == true)
+        {
+            StartCoroutine(Shaking());
+        }
+        if (animShake.GetBool("canShake2") == true)
+        {
+            StartCoroutine(Shaking2());
+        }
 
-       
         Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
 
         if  (Physics.Raycast(ray, out RaycastHit hit, dist, lighter))
@@ -51,7 +58,7 @@ public class LightController : MonoBehaviour
                     Debug.Log("2");
                     myLight2.enabled = !myLight2.enabled;
                     myLight3.enabled = !myLight3.enabled;
-                    animShake.SetBool("canShake2", true);
+                 
                 }
 
                 if (animShake.GetBool("canShake2") == true)
@@ -70,10 +77,7 @@ public class LightController : MonoBehaviour
                 }
             }
 
-            if (animShake.GetBool("canShake") == true)
-            {
-                StartCoroutine(Shaking());
-            }
+         
 
 
             if (myLight.enabled && myLight2.enabled && myLight3.enabled && myLight4.enabled)
