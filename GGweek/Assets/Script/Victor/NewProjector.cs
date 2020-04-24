@@ -68,6 +68,7 @@ public class NewProjector : MonoBehaviour
                 bobine.GetComponent<Rigidbody>().isKinematic = true;
                 bobine.transform.position = projector.position;
                 ChangeVideo(video[int.Parse(bobine.name)]);
+               
                 bobine.SetActive(false);
             }
         }
