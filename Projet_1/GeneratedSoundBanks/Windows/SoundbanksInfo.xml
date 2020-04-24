@@ -74,6 +74,30 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1295443542" Name="Play_Son_Video_1" ObjectPath="\Events\Default Work Unit\Play_Son_Video_1" DurationType="OneShot" DurationMin="64.800003" DurationMax="64.800003">
+					<IncludedMemoryFiles>
+						<File Id="860877395" Language="SFX">
+							<ShortName>Jour 1_Son.wav</ShortName>
+							<Path>SFX\Jour 1_Son_32513D82.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1295443541" Name="Play_Son_Video_2" ObjectPath="\Events\Default Work Unit\Play_Son_Video_2" DurationType="OneShot" DurationMin="106.000000" DurationMax="106.000000">
+					<IncludedMemoryFiles>
+						<File Id="910252400" Language="SFX">
+							<ShortName>Jour 16_Son.wav</ShortName>
+							<Path>SFX\Jour 16_Son_32513D82.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1295443540" Name="Play_Son_Video_3" ObjectPath="\Events\Default Work Unit\Play_Son_Video_3" DurationType="OneShot" DurationMin="80.000000" DurationMax="80.000000">
+					<IncludedMemoryFiles>
+						<File Id="801224424" Language="SFX">
+							<ShortName>Jour 24_Son.wav</ShortName>
+							<Path>SFX\Jour 24_Son_32513D82.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2834198710" Name="Play_Tuyau" ObjectPath="\Events\Default Work Unit\Play_Tuyau" DurationType="OneShot" DurationMin="0.576916" DurationMax="0.576916">
 					<IncludedMemoryFiles>
 						<File Id="146483888" Language="SFX">

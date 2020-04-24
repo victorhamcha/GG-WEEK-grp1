@@ -1,5 +1,8 @@
 Event	ID	Name			Wwise Object Path	Notes
 	522764323	Play_Cri_Monstre			\Default Work Unit\Play_Cri_Monstre	
+	1295443540	Play_Son_Video_3			\Default Work Unit\Play_Son_Video_3	
+	1295443541	Play_Son_Video_2			\Default Work Unit\Play_Son_Video_2	
+	1295443542	Play_Son_Video_1			\Default Work Unit\Play_Son_Video_1	
 	1518339268	Play_Valve			\Default Work Unit\Play_Valve	
 	1616188737	Play_Vapeur			\Default Work Unit\Play_Vapeur	
 	2834198710	Play_Tuyau			\Default Work Unit\Play_Tuyau	
@@ -16,7 +19,10 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	308093060	Cri monstre marin	C:\Users\Dovbe\OneDrive\Bureau\Projet\GG Week\Projet_1\.cache\Windows\SFX\Cri monstre marin_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\RC_Cri_Monstre\Cri monstre marin		185371
 	376182921	Bruit de pas	C:\Users\Dovbe\OneDrive\Bureau\Projet\GG Week\Projet_1\.cache\Windows\SFX\Bruit de pas_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\RC_Bruit_De_Pas\Bruit de pas		154551
 	431017858	Ampoule_qui_sallume	C:\Users\Dovbe\OneDrive\Bureau\Projet\GG Week\Projet_1\.cache\Windows\SFX\Ampoule_qui_sallume_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\RC_Ampoule\Ampoule_qui_sallume		6929
+	801224424	Jour 24_Son	C:\Users\Dovbe\OneDrive\Bureau\Projet\GG Week\Projet_1\.cache\Windows\SFX\Jour 24_Son_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\RC_Son_Video_3\Jour 24_Son		1505082
 	840771541	Vapeur	C:\Users\Dovbe\OneDrive\Bureau\Projet\GG Week\Projet_1\.cache\Windows\SFX\Vapeur_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\RC_Vapeur\Vapeur		96818
+	860877395	Jour 1_Son	C:\Users\Dovbe\OneDrive\Bureau\Projet\GG Week\Projet_1\.cache\Windows\SFX\Jour 1_Son_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\RC_Son_Video_1\Jour 1_Son		1219610
 	871091986	Fond sonore	C:\Users\Dovbe\OneDrive\Bureau\Projet\GG Week\Projet_1\.cache\Windows\SFX\Fond sonore_F2BF74AC.wem		\Interactive Music Hierarchy\Default Work Unit\PL_Action\Fond sonore\Fond sonore		174175
+	910252400	Jour 16_Son	C:\Users\Dovbe\OneDrive\Bureau\Projet\GG Week\Projet_1\.cache\Windows\SFX\Jour 16_Son_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\RC_Son_Video_2\Jour 16_Son		1958756
 	1048312052	Valve qui tourne	C:\Users\Dovbe\OneDrive\Bureau\Projet\GG Week\Projet_1\.cache\Windows\SFX\Valve qui tourne_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\RC_Valve\Valve qui tourne		187653
 

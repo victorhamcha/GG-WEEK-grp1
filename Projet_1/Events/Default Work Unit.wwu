@@ -106,6 +106,39 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Son_Video_1" ID="{2F413F6B-375E-4465-9119-798B0B3C4EE3}">
+					<ChildrenList>
+						<Action Name="" ID="{CE84DAAC-4529-416C-B49F-CD75D0D7DAE6}" ShortID="68005247">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Son_Video_1" ID="{DAB8F885-35A1-46C9-A6EF-779574048A4D}" WorkUnitID="{A3E03513-FC3E-47E9-8D83-3E026723752B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Son_Video_2" ID="{CAC7BC81-EC55-4C74-8D70-7F3FD6479213}">
+					<ChildrenList>
+						<Action Name="" ID="{9886FDEC-196C-453B-A940-EB4B0D6BE8DD}" ShortID="460567332">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Son_Video_2" ID="{E95C54C2-718A-4AA0-8C01-825A23D1A1DC}" WorkUnitID="{A3E03513-FC3E-47E9-8D83-3E026723752B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Son_Video_3" ID="{65586F91-A288-48EF-8A21-BF715A1B6672}">
+					<ChildrenList>
+						<Action Name="" ID="{7A8C6BF4-9BA5-41D2-BE23-C23CDE3B578B}" ShortID="536917583">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Son_Video_3" ID="{FCEC4F50-5055-4269-858F-82FABBCB594A}" WorkUnitID="{A3E03513-FC3E-47E9-8D83-3E026723752B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

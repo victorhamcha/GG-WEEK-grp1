@@ -307,6 +307,120 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="RC_Son_Video_1" ID="{DAB8F885-35A1-46C9-A6EF-779574048A4D}" ShortID="919851357">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="18"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7045E412-3CDC-4509-958B-CAD45EA1FDA3}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX_Volume" ID="{BE2C19A6-5120-4D0E-8AFA-DBC28463E43F}" WorkUnitID="{2B834AE5-4D6F-4056-BB8A-66857362A3D9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Jour 1_Son" ID="{BA26D255-2FEA-45AE-A7DF-C5DF57EB9D82}" ShortID="1014416263">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7045E412-3CDC-4509-958B-CAD45EA1FDA3}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main_Volume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B834AE5-4D6F-4056-BB8A-66857362A3D9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Jour 1_Son" ID="{037A15C6-7219-4E2A-ACF6-915A2A9C8FB4}">
+									<Language>SFX</Language>
+									<AudioFile>Jour 1_Son.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="860877395"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Jour 1_Son" ID="{037A15C6-7219-4E2A-ACF6-915A2A9C8FB4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="RC_Son_Video_2" ID="{E95C54C2-718A-4AA0-8C01-825A23D1A1DC}" ShortID="265646375">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="18"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7045E412-3CDC-4509-958B-CAD45EA1FDA3}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX_Volume" ID="{BE2C19A6-5120-4D0E-8AFA-DBC28463E43F}" WorkUnitID="{2B834AE5-4D6F-4056-BB8A-66857362A3D9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Jour 16_Son" ID="{3F15A006-FF0C-460D-8563-644170386BD5}" ShortID="632174552">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7045E412-3CDC-4509-958B-CAD45EA1FDA3}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main_Volume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B834AE5-4D6F-4056-BB8A-66857362A3D9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Jour 16_Son" ID="{76A5DD4D-C1B6-4DCA-A67C-9D80AC9AD82B}">
+									<Language>SFX</Language>
+									<AudioFile>Jour 16_Son.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="910252400"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Jour 16_Son" ID="{76A5DD4D-C1B6-4DCA-A67C-9D80AC9AD82B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="RC_Son_Video_3" ID="{FCEC4F50-5055-4269-858F-82FABBCB594A}" ShortID="58347196">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="18"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7045E412-3CDC-4509-958B-CAD45EA1FDA3}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX_Volume" ID="{BE2C19A6-5120-4D0E-8AFA-DBC28463E43F}" WorkUnitID="{2B834AE5-4D6F-4056-BB8A-66857362A3D9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Jour 24_Son" ID="{E68064EA-019F-4EA0-AC01-CEC25C71305A}" ShortID="308295213">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7045E412-3CDC-4509-958B-CAD45EA1FDA3}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main_Volume" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2B834AE5-4D6F-4056-BB8A-66857362A3D9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Jour 24_Son" ID="{36B74CFC-9CB4-4CA8-B5F0-AB15C1B262D5}">
+									<Language>SFX</Language>
+									<AudioFile>Jour 24_Son.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="801224424"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Jour 24_Son" ID="{36B74CFC-9CB4-4CA8-B5F0-AB15C1B262D5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
