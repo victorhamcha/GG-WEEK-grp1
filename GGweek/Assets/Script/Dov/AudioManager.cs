@@ -25,43 +25,48 @@ public class AudioManager : MonoBehaviour
         AkSoundEngine.SetRTPCValue("RTPC_SFX_Volume", volumeSFX.value);
     }
 
-    //public void changeMainMusic()
-    //{
-    //    AkSoundEngine.PostEvent("Play_Music", gameObject);
-    //}
-
-
-    public void Ampoule()
+    public static void PlayAudio(Transform pos, string son)
     {
-        AkSoundEngine.PostEvent("Play_Ampoule", gameObject);
+        AkSoundEngine.PostEvent(son, pos.gameObject);
     }
-
-    public void Baleine()
+    public void Baleine(Transform pos)
     {
-        AkSoundEngine.PostEvent("Play_Baleine", gameObject);
+        AkSoundEngine.PostEvent("Play_Baleine", pos.gameObject);
     }
-    public void BruitDePas()
+    public void BruitDePas(Transform pos)
     {
-        AkSoundEngine.PostEvent("Play_Bruit_De_Pas", gameObject);
+        AkSoundEngine.PostEvent("Play_Bruit_De_Pas", pos.gameObject);
     }
-    public void CriMonstre()
+    public void CriMonstre(Transform pos)
     {
-        AkSoundEngine.PostEvent("Play_Cri_Monstre", gameObject);
+        AkSoundEngine.PostEvent("Play_Cri_Monstre", pos.gameObject);
     }
-    public void Flippant()
+    public void Flippant(Transform pos)
     {
-        AkSoundEngine.PostEvent("Play_flippant", gameObject);
+        AkSoundEngine.PostEvent("Play_flippant", pos.gameObject);
     }
-    public void Tuyau()
+    public void Tuyau(Transform pos)
     {
-        AkSoundEngine.PostEvent("Play_Tuyau", gameObject);
+        AkSoundEngine.PostEvent("Play_Tuyau", pos.gameObject);
     }
-    public void Valve()
+    public void Valve(Transform pos)
     {
-        AkSoundEngine.PostEvent("Play_Valve", gameObject);
+        AkSoundEngine.PostEvent("Play_Valve", pos.gameObject);
     }
-    public void Vapeur()
+    public void Vapeur(Transform pos)
     {
-        AkSoundEngine.PostEvent("Play_Vapeur", gameObject);
+        AkSoundEngine.PostEvent("Play_Vapeur", pos.gameObject);
+    }
+    public void SonVideo1(Transform pos)
+    {
+        AkSoundEngine.PostEvent("Play_Son_Video_1", pos.gameObject);
+    }
+    public void SonVideo2(Transform pos)
+    {
+        AkSoundEngine.PostEvent("Play_Son_Video_2", pos.gameObject);
+    }
+    public void SonVideo3(Transform pos)
+    {
+        AkSoundEngine.PostEvent("Play_Son_Video_3", pos.gameObject);
     }
 }
