@@ -45,8 +45,6 @@ public class Scene1 : MonoBehaviour
         lightAndAnimation = FindObjectOfType<LightController>();
         lightAndAnimation.animShake.SetBool("canShake", true);
         
-        AudioManager.PlayAudio(vane, "Play_Vapeur");
-        
 
     }
 
@@ -88,7 +86,6 @@ public class Scene1 : MonoBehaviour
                             Destroy(destroyed);
                             tubeHaut.gameObject.SetActive(true);
                             tubeOn++;
-                            AudioManager.PlayAudio(player, "Play_Tuyau");
                         }
                         else if (grab.inHand.name == "tubeBasItem")
                         {
@@ -97,7 +94,6 @@ public class Scene1 : MonoBehaviour
                             Destroy(destroyed);
                             tubeBas.gameObject.SetActive(true);
                             tubeOn++;
-                            AudioManager.PlayAudio(player, "Play_Tuyau");
                         }
                         else if (grab.inHand.name == "tubeMilieuItem")
                         {
@@ -106,7 +102,6 @@ public class Scene1 : MonoBehaviour
                             Destroy(destroyed);
                             tubeMilieu.gameObject.SetActive(true);
                             tubeOn++;
-                            AudioManager.PlayAudio(player, "Play_Tuyau");
                         }
                          if (tubeOn < 2)
                         {
@@ -149,7 +144,6 @@ public class Scene1 : MonoBehaviour
                         {
                             AudioManager.PlayAudio(vane, "Play_Valve");
                             smoke.SetActive(false);
-                            AudioManager.StopAudio(vane, "Stop_Vapeur");
 
                         }
                     }
@@ -162,6 +156,8 @@ public class Scene1 : MonoBehaviour
                     }
 
                     
+
+
                 }
                
 
