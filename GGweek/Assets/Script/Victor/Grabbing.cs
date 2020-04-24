@@ -22,7 +22,7 @@ public class Grabbing : MonoBehaviour
     private Item prevItem;
     private Item currentItem;
     public GameObject inventaire;
-
+    bool fromInvi=false;
     public bool _using;
     // public Slider zoom;
     void Start()
@@ -40,21 +40,7 @@ public class Grabbing : MonoBehaviour
        }
       
 
-        if(Input.GetKeyDown(KeyCode.Tab))
-        {
-            if(!inventaireOn)
-            {
-                OpenInv();
-                if(inHand!=null)
-                {
-                    DropObject(inHand);
-                }
-            }
-            else
-            {
-                CloseInv();
-            }
-        }
+      
       
         Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
 
@@ -83,10 +69,12 @@ public class Grabbing : MonoBehaviour
            {
                 DropItem(grabed.GetComponent<Item>());
            }
-            else if (Input.GetKeyDown(KeyCode.F))
+            else if (Input.GetKeyDown(KeyCode.Tab))
             {
+                fromInvi = true;
+                _using = true;
                inHand= Use(grabed);
-                CloseInv();
+                
             }
         }
         else if(_using && !inventaireOn)
@@ -123,6 +111,42 @@ public class Grabbing : MonoBehaviour
                 // grabed.transform.localRotation = Quaternion.Euler(xRotation, 0f,zRotation);
             }
             mPrevPos = Input.mousePosition;
+
+
+        }
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            if (!inventaireOn)
+            {
+                OpenInv();
+                if (inHand != null&& items.Count >= 7)
+                {
+                    DropObject(inHand);
+                }
+                else if(inHand!=null)
+                {
+                    bool verify = true;
+                    for(int i=0;i<items.Count;i++)
+                    {
+                        if(inHand.GetComponent<Item>()==items[i])
+                        {
+                            verify = false;
+                            break;
+                        }
+                        
+                    }
+                    if(verify)
+                    {
+                        addItem(inHand.GetComponent<Item>());
+                        grabed = ShowObject(items[items.Count - 1].gameObject);
+                    }
+                   
+                }
+            }
+            else
+            {
+                CloseInv();
+            }
         }
     }
 
@@ -295,7 +319,7 @@ public class Grabbing : MonoBehaviour
 
     public GameObject Use(GameObject grabbed)
     {
-        if (_using)
+        if (_using&&!fromInvi)
         {
             DropObject(inHand);
         }
@@ -310,6 +334,7 @@ public class Grabbing : MonoBehaviour
         grabbed.GetComponent<Collider>().isTrigger = true;
         grabbed.transform.position = objPos.position;
         _using = true;
+        fromInvi = false;
         return grabbed;
         
     }
@@ -323,7 +348,7 @@ public class Grabbing : MonoBehaviour
                 Item mbPiece = items[i];
                
                 
-                    if (mbPiece.gameObject.name == grabed.GetComponent<Item>().pusslePiece.gameObject.name)
+                    if (mbPiece.gameObject.name == grabed.GetComponent<Item>().pusslePiece.gameObject.name|| mbPiece.gameObject.name == grabed.GetComponent<Item>().pusslePiece.gameObject.name+"(Clone)")
                     {
 
                         GameObject thePiece = Instantiate(grabed.GetComponent<Item>().instance, new Vector3(1000, 1000, 1000), Quaternion.identity);
@@ -331,7 +356,7 @@ public class Grabbing : MonoBehaviour
                         GameObject destroyed = grabed;
                         GameObject destroyed2 = items[i].gameObject;
                         DropItem(grabed.GetComponent<Item>());
-                        DropItem(items[i]);
+                        DropItem(mbPiece);
                         Destroy(destroyed);
                         Destroy(destroyed2);
                         addItem(thePiece.GetComponent<Item>());

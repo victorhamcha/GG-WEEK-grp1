@@ -15,9 +15,11 @@ public class NewProjector : MonoBehaviour
     private GameObject bobine;
     private GameObject bobineNear;
     private Grabbing grab;
+    private Scene1 scene;
     bool near=false;
     void Start()
     {
+        scene = FindObjectOfType<Scene1>();
         grab = player.GetComponent<Grabbing>();
         screen = GetComponentInChildren<VideoPlayer>();
 
@@ -27,10 +29,22 @@ public class NewProjector : MonoBehaviour
 
     void Update()
     {
-        //Ray ray = new Ray(transform.position, transform.forward);
-        //Debug.DrawRay(ray.origin, ray.direction, Color.green);
-        //Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, projectable);
-        //projection.position = new Vector3(hit.point.x+0.001f, hit.point.y + 0.001f, hit.point.z + 0.001f);
+      
+        if(bobine!=null)
+        {
+            if(bobine.name=="0"&&!scene.scene1)
+            {
+                scene.scene1 = true;
+            }
+            else if (bobine.name == "1" && !scene.scene2)
+            {
+                scene.scene2 = true;
+            }
+            else if (bobine.name == "2" && !scene.scene3)
+            {
+                scene.scene3 = true;
+            }
+        }
         
         if(near)
         {
@@ -65,16 +79,7 @@ public class NewProjector : MonoBehaviour
                 near = true;
                 bobineNear= grab.inHand;
             }
-            else if (Input.GetKeyDown(KeyCode.Mouse0)&&!grab._using)
-            {
-                if (!grab._using&&bobine!=null)
-                {
-                    bobine.SetActive(true);
-                    grab.inHand = grab.Use(bobine);
-                    bobine = null;
-                    screen.clip = null;
-                }
-            }
+           
            
             
         }

@@ -15,7 +15,8 @@ public class LightController : MonoBehaviour
     private Light myLight2;
     private Light myLight3;
     private Light myLight4;
-
+    public bool finish;
+    public LayerMask lighter;
 
     private void Start()
     {
@@ -28,23 +29,26 @@ public class LightController : MonoBehaviour
     private void Update()
     {
 
-        RaycastHit hit;
-        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+       
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
 
-        if (Physics.Raycast(ray, out hit, dist))
+        if  (Physics.Raycast(ray, out RaycastHit hit, dist, lighter))
         {
-            if (hit.collider.gameObject.name == "Sphere1")
+            if (hit.collider.gameObject.name == "ValveLampe1")
             {
-                if (Input.GetButtonDown("Fire1"))
+                if (Input.GetKeyDown(KeyCode.F))
                 {
+                    Debug.Log("1");
                     myLight.enabled = !myLight.enabled;
                     myLight3.enabled = !myLight3.enabled;
+                    
                 }
             }
-            if (hit.collider.gameObject.name == "Sphere2")
+            if (hit.collider.gameObject.name == "ValveLampe2")
             {
-                if (Input.GetButtonDown("Fire1"))
+                if (Input.GetKeyDown(KeyCode.F))
                 {
+                    Debug.Log("2");
                     myLight2.enabled = !myLight2.enabled;
                     myLight3.enabled = !myLight3.enabled;
                     animShake.SetBool("canShake2", true);
@@ -55,10 +59,11 @@ public class LightController : MonoBehaviour
                     StartCoroutine(Shaking2());
                 }
             }
-            if (hit.collider.gameObject.name == "Sphere3")
+            if (hit.collider.gameObject.name == "ValveLampe3")
             {
-                if (Input.GetButtonDown("Fire1"))
+                if (Input.GetKeyDown(KeyCode.F))
                 {
+                    Debug.Log("1");
                     myLight2.enabled = !myLight2.enabled;
                     myLight4.enabled = !myLight4.enabled;
                     animShake.SetBool("canShake", true);
@@ -73,6 +78,7 @@ public class LightController : MonoBehaviour
 
             if (myLight.enabled && myLight2.enabled && myLight3.enabled && myLight4.enabled)
             {
+                if(!finish)
                 Finish();
             }
             
@@ -101,6 +107,7 @@ public class LightController : MonoBehaviour
         void Finish()
         {
             Debug.Log("Enigme 3 reussit !!");
+            finish = true;
         }
         
     }
