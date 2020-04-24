@@ -55,7 +55,19 @@ public class NewProjector : MonoBehaviour
                 bobine = bobineNear;                  
                 Debug.Log("change");
                 ChangeVideo(video[int.Parse(bobine.name)]);
-                audio.clip = clip[int.Parse(bobine.name)];
+                //audio.clip = clip[int.Parse(bobine.name)];
+                if(bobine.name=="0")
+                {
+                    //premier sond
+                }
+                else if (bobine.name == "1")
+                {
+                    //deuxième sond
+                }
+                else if (bobine.name == "2")
+                {
+                    //troisième sond
+                }
                 GameObject destroyed = grab.inHand;
                 grab.DropObject(grab.inHand);
                 Destroy(destroyed);

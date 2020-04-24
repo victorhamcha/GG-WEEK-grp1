@@ -10656,10 +10656,11 @@ MonoBehaviour:
   - {fileID: 32900000, guid: 1c97f5be534b1ad48a6d96beb5d6839e, type: 3}
   - {fileID: 32900000, guid: 79f37ddfcecded944a52a27ebe2eae8c, type: 3}
   - {fileID: 32900000, guid: 9d452a3878751c4449f3c4cc37c85a9f, type: 3}
-  audio:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  clip:
+  - {fileID: 8300000, guid: 001e6452d9a887148a8fb56be630bb08, type: 3}
+  - {fileID: 8300000, guid: 734525bc745a5ec47b3a0c9ebebbc8ab, type: 3}
+  - {fileID: 8300000, guid: 7a68f9c631763f0419e5dc6717a782bb, type: 3}
+  audio: {fileID: 6544091}
 --- !u!1001 &1439309645
 PrefabInstance:
   m_ObjectHideFlags: 0
