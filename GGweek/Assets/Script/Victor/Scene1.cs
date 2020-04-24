@@ -45,7 +45,7 @@ public class Scene1 : MonoBehaviour
     {
         helpTxt.text = "Qu'est-ce qu'il se passe ou suis-je?";
         lightAndAnimation = FindObjectOfType<LightController>();
-        lightAndAnimation.animShake.SetBool("canShake", true);
+        
         
 
     }
@@ -167,7 +167,7 @@ public class Scene1 : MonoBehaviour
             if (guidonOn)
             {
 
-                if ((guidon.position - player.position).sqrMagnitude < distance * distance*4 && !grab.inventaireOn)
+                if ((guidon.position - player.position).sqrMagnitude < distance * distance*6 && !grab.inventaireOn)
                 {
                     if (Input.GetKeyDown(KeyCode.F))
                     {
@@ -265,7 +265,7 @@ public class Scene1 : MonoBehaviour
                 }
             }
            
-            if (lastThing && (guidon.position - player.position).sqrMagnitude < distance * distance * 4 && !grab.inventaireOn)
+            if (lastThing && (guidon.position - player.position).sqrMagnitude < distance * distance * 6 && !grab.inventaireOn)
             {
                 if (Input.GetKeyDown(KeyCode.F))
                 {
