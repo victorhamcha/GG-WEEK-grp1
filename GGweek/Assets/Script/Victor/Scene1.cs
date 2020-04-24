@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Scene1 : MonoBehaviour
 {
@@ -39,6 +40,7 @@ public class Scene1 : MonoBehaviour
     bool lastThing = false;
     public GameObject barometrepart;
     private LightController lightAndAnimation;
+   
     void Start()
     {
         helpTxt.text = "Qu'est-ce qu'il se passe ou suis-je?";
@@ -267,8 +269,9 @@ public class Scene1 : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-                    lightAndAnimation.animShake.SetBool("canShake", true);
-                    Debug.Log("fin");
+                    
+                    SceneManager.LoadScene("Fin");
+
                 }
             }
         }
