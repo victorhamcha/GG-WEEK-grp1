@@ -82,7 +82,18 @@
 				<RandomSequenceContainer Name="RC_Bruit_De_Pas" ID="{567BC768-B5DF-477C-8987-1DACF5550361}" ShortID="402342957">
 					<PropertyList>
 						<Property Name="Color" Type="int16" Value="18"/>
+						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -284,6 +295,9 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="Vapeur" ID="{0B8AE2F3-347B-45F0-8BF6-72DE443A421C}" ShortID="506831338">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7045E412-3CDC-4509-958B-CAD45EA1FDA3}"/>

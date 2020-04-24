@@ -114,14 +114,16 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1616188737" Name="Play_Vapeur" ObjectPath="\Events\Default Work Unit\Play_Vapeur" DurationType="OneShot" DurationMin="2.932698" DurationMax="2.932698">
+				<Event Id="1616188737" Name="Play_Vapeur" ObjectPath="\Events\Default Work Unit\Play_Vapeur" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="840771541" Language="SFX">
 							<ShortName>Vapeur.wav</ShortName>
-							<Path>SFX\Vapeur_32513D82.wem</Path>
+							<Path>SFX\Vapeur_F2BF74AC.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="438286008" Name="Stop_Pas" ObjectPath="\Events\Default Work Unit\Stop_Pas" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="171978999" Name="Stop_Vapeur" ObjectPath="\Events\Default Work Unit\Stop_Vapeur" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 		</SoundBank>
 	</SoundBanks>

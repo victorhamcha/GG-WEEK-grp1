@@ -57,6 +57,14 @@ using System.Collections;
         private void Update()
         {
             Jumping();
+            if (Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+            {
+                AudioManager.PlayAudio(_rb.transform, "Play_Bruit_De_Pas");
+            }
+        else
+        {
+            AudioManager.StopAudio(_rb.transform, "Stop_Pas");
+        }
            
         }
 
@@ -81,10 +89,16 @@ using System.Collections;
 
             
                 if (CanApplyForce(vertical, axis))
+        {
                     _rb.velocity += vertical;
+            
+        }
 
                 if (CanApplyForce(horizontal, axis))
+        {
                     _rb.velocity += horizontal;
+               
+        }
             
 
         }

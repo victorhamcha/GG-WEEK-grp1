@@ -17,6 +17,10 @@ public class LightController : MonoBehaviour
     private Light myLight4;
     public bool finish;
     public LayerMask lighter;
+    private float timer1 = 4.0f;
+    private float timer2 = 3.0f;
+    private bool firstStep = false;
+    private bool unstep = false;
 
     private void Start()
     {
@@ -50,7 +54,7 @@ public class LightController : MonoBehaviour
                         Debug.Log("1");
                         myLight.enabled = !myLight.enabled;
                         myLight3.enabled = !myLight3.enabled;
-
+                        AudioManager.PlayAudio(cam.transform, "Play_Ampoule");
                     }
                 }
                 if (hit.collider.gameObject.name == "ValveLampe2")
@@ -60,7 +64,7 @@ public class LightController : MonoBehaviour
                         Debug.Log("2");
                         myLight2.enabled = !myLight2.enabled;
                         myLight3.enabled = !myLight3.enabled;
-
+                        AudioManager.PlayAudio(cam.transform, "Play_Ampoule");
                     }
 
                     if (animShake.GetBool("canShake2") == true)
@@ -75,7 +79,7 @@ public class LightController : MonoBehaviour
                         Debug.Log("1");
                         myLight2.enabled = !myLight2.enabled;
                         myLight4.enabled = !myLight4.enabled;
-                        animShake.SetBool("canShake", true);
+                        AudioManager.PlayAudio(cam.transform, "Play_Ampoule");
                     }
                 }
             }
@@ -88,6 +92,31 @@ public class LightController : MonoBehaviour
             {
                 if(!finish)
                 Finish();
+            }
+
+            if (finish)
+            {
+                if (timer1 > 0)
+                {
+                    timer1 -= Time.deltaTime;
+                }
+                else if (!firstStep)
+                {
+                    AudioManager.PlayAudio(cam.transform, "Play_Cri_Monstre");
+                    firstStep = true;
+                    animShake.SetBool("canShake", true);
+                }
+
+                if (timer2 > 0 && firstStep)
+                {
+                    timer2 -= Time.deltaTime;
+                }
+                else if (!unstep && firstStep)
+                {
+                    AudioManager.PlayAudio(cam.transform, "Play_flippant");
+                    unstep = true;
+                }
+                
             }
             
         }

@@ -139,6 +139,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Stop_Vapeur" ID="{3ECC4F8A-EBF7-4EA6-8BF6-F870FFFF3B84}">
+					<ChildrenList>
+						<Action Name="" ID="{3400EEA8-F6F3-480D-AA46-287EC8A2E001}" ShortID="610032080">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RC_Vapeur" ID="{23D3B067-570A-44C6-AC7B-82F925B3474F}" WorkUnitID="{A3E03513-FC3E-47E9-8D83-3E026723752B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

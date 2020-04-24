@@ -58,14 +58,17 @@ public class NewProjector : MonoBehaviour
                 if(bobine.name=="0")
                 {
                     //premier sond
+                    AudioManager.PlayAudio(projector, "Play_Son_Video_1");
                 }
                 else if (bobine.name == "1")
                 {
                     //deuxième sond
+                    AudioManager.PlayAudio(projector, "Play_Son_Video_2");
                 }
                 else if (bobine.name == "2")
                 {
                     //troisième sond
+                    AudioManager.PlayAudio(projector, "Play_Son_Video_1");
                 }
                 GameObject destroyed = grab.inHand;
                 grab.DropObject(grab.inHand);
