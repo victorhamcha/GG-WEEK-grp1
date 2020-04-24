@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b236a017b3f66a4fa3901d2cc2bb4b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  icon: {fileID: 21300000, guid: f454fa06c79241541be8a46a35cc6e1d, type: 3}
   inPuzzle: 0
   maxOutlineWidth: 0.1
   instance: {fileID: 0}

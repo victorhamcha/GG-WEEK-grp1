@@ -56,7 +56,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b236a017b3f66a4fa3901d2cc2bb4b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  icon: {fileID: 21300000, guid: f9e6bbc525ffdfd4aa2b622f2c467ed7, type: 3}
   inPuzzle: 1
   maxOutlineWidth: 0
   instance: {fileID: 776574629211598260, guid: 025744483437cbf4bb212dcf048f49be, type: 3}

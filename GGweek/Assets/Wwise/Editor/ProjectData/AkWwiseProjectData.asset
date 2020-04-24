@@ -15,15 +15,15 @@ MonoBehaviour:
   AcousticTextureWwu:
   - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     ParentPath: Default Work Unit
-    guid: 6e3f47b967de3d46a045ac5d7c907b6d
+    guid: 3b37a295c7f51d4dbfc36ef357832367
     GuidInternal: 
-    m_lastTime: -8586138872485393621
+    m_lastTime: -8586138825080588426
     List: []
   - PhysicalPath: Virtual Acoustics\Factory Reflect Acoustic Textures.wwu
     ParentPath: Factory Reflect Acoustic Textures
     guid: 6b663d46a83ca54f8b4a5fef12b883f6
     GuidInternal: 
-    m_lastTime: -8586147346476980933
+    m_lastTime: -8586138825080588426
     List:
     - name: Acoustic_Banner
       guid: f2532d2fccda8e408b8898b1b52a26d6
@@ -193,25 +193,56 @@ MonoBehaviour:
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPath: Default Work Unit
-    guid: 9719d601ba1c2145a917f504bf4adc94
+    guid: e54a832b6f4d5640bb8a66857362a3d9
     GuidInternal: 
-    m_lastTime: -8586138872485283920
+    m_lastTime: -8586138825082712744
     List:
-    - name: Master Audio Bus
+    - name: Main_Volume
       guid: d8a41415a61d2a41a17e75ca0c2149f3
-      id: 3803692087
+      id: 2312172015
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Master Audio Bus
+      - ElementName: Main_Volume
         ObjectType: 2
-      Path: Default Work Unit\Master Audio Bus
+      Path: Default Work Unit\Main_Volume
+    - name: Motion Factory Bus
+      guid: c6b9f92af16ee946b5f2e30c9e602c74
+      id: 985987111
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Motion Factory Bus
+        ObjectType: 2
+      Path: Default Work Unit\Motion Factory Bus
+    - name: Music_Volume
+      guid: c65fc1178c631d47877d89db13259fc3
+      id: 1006694123
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Main_Volume
+        ObjectType: 2
+      - ElementName: Music_Volume
+        ObjectType: 2
+      Path: Default Work Unit\Main_Volume\Music_Volume
+    - name: SFX_Volume
+      guid: a6192cbe20510e4d8afadbc28463e43f
+      id: 1564184899
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Main_Volume
+        ObjectType: 2
+      - ElementName: SFX_Volume
+        ObjectType: 2
+      Path: Default Work Unit\Main_Volume\SFX_Volume
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPath: Default Work Unit
     guid: c02b58ff8d7ed442a0ae8ecbae7fbeff
     GuidInternal: 
-    m_lastTime: -8586138862371543323
+    m_lastTime: -8586138825080688158
     List:
     - name: Massounbank
       guid: 8ca0b394ae2f934ca90a7491e33cdf00
@@ -227,7 +258,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f221816ccce72d4f92ce1ce89c3756f1
     GuidInternal: 
-    m_lastTime: -8586138846724547278
+    m_lastTime: -8586138825082872320
     List:
     - name: Play_Ampoule
       guid: 13a2c9a250e1f3448f5f3be0ad053409
@@ -340,15 +371,59 @@ MonoBehaviour:
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPath: Default Work Unit
-    guid: 356e307bb5cce64aabff2e73fba18fc0
+    guid: fa97799b56891546827f9645a381d5b6
     GuidInternal: 
-    m_lastTime: -8586138872485912238
-    List: []
+    m_lastTime: -8586138825082842401
+    List:
+    - name: Audio_Settings
+      guid: 7114267589385c468238fdaad4e4744f
+      id: 1484330123
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Audio_Settings
+        ObjectType: 4
+      - ElementName: Audio_Settings
+        ObjectType: 13
+      Path: Default Work Unit\Audio_Settings\Audio_Settings
+    - name: RTPC_Main_Volume
+      guid: f5accb57076bfe459a7978b268d6a254
+      id: 1856500933
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Audio_Settings
+        ObjectType: 4
+      - ElementName: RTPC_Main_Volume
+        ObjectType: 13
+      Path: Default Work Unit\Audio_Settings\RTPC_Main_Volume
+    - name: RTPC_Music_Volume
+      guid: 40920e0956477740870b0ee4f84aa502
+      id: 1596647065
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Audio_Settings
+        ObjectType: 4
+      - ElementName: RTPC_Music_Volume
+        ObjectType: 13
+      Path: Default Work Unit\Audio_Settings\RTPC_Music_Volume
+    - name: RTPC_SFX_Volume
+      guid: 0d85937998da104d9debcdfdf8f5c4d8
+      id: 932301089
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Audio_Settings
+        ObjectType: 4
+      - ElementName: RTPC_SFX_Volume
+        ObjectType: 13
+      Path: Default Work Unit\Audio_Settings\RTPC_SFX_Volume
   - PhysicalPath: Game Parameters\Factory Motion.wwu
     ParentPath: Factory Motion
     guid: 225213d7dbd1d042adc0930743567776
     GuidInternal: 
-    m_lastTime: -8586147346475978526
+    m_lastTime: -8586138825082822457
     List:
     - name: Playback_Rate
       guid: e37e38283ac11643b9c3db5c521624af
@@ -372,7 +447,7 @@ MonoBehaviour:
     ParentPath: Factory SoundSeed Air Game Syncs
     guid: 5577163b42fb8b4598bf96f557afb3b9
     GuidInternal: 
-    m_lastTime: -8586147346484372329
+    m_lastTime: -8586138825082822457
     List:
     - name: SS_Air_Fear
       guid: 59062ef746431c4ea1b1dab46a05101e
@@ -467,23 +542,60 @@ MonoBehaviour:
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPath: Default Work Unit
-    guid: 4376f4f465b11d429e159efd552d8c75
+    guid: afef05136cbd384abb71d9f1b468777b
     GuidInternal: 
-    m_lastTime: -8586138872485433527
-    List: []
+    m_lastTime: -8586138825080598401
+    List:
+    - name: game_state
+      guid: 79dde6aeca156c4a81b101ae984e8b55
+      id: 766723505
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: game_state
+        ObjectType: 9
+      Path: Default Work Unit\game_state
+      values:
+      - name: action
+        guid: 6c162e678e5c5d4fb6e9b64c2b1e6e45
+        id: 209137191
+        PathAndIcons:
+        - ElementName: action
+          ObjectType: 8
+      - name: idle
+        guid: f8cf6e6775439d48a71c5eafc43cd312
+        id: 1874288895
+        PathAndIcons:
+        - ElementName: idle
+          ObjectType: 8
+      - name: None
+        guid: 16900961cdcacd459e89457e886d7e93
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      - name: victory
+        guid: e506fa42ffa0eb4e94b50320b00a02cf
+        id: 2716678721
+        PathAndIcons:
+        - ElementName: victory
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPath: Default Work Unit
-    guid: 0d781cce745ad145aaf4883d2d9492ff
+    guid: 13669290aeb3e64281db0e1ddbaa9536
     GuidInternal: 
-    m_lastTime: -8586138872485752665
+    m_lastTime: -8586138825080608374
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPath: Default Work Unit
-    guid: 91aa4eb0833bee4faa40bc8104356179
+    guid: 05c23c2afa9a664599abe7ed12e95e6f
     GuidInternal: 
-    m_lastTime: -8586138872486131387
+    m_lastTime: -8586138825080588426
     List: []
   ExpandedItems:
   - /Projet_1
